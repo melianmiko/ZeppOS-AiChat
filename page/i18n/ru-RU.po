@@ -1,0 +1,71 @@
+msgid "About..."
+msgstr "О программе..."
+
+msgid "Font size..."
+msgstr "Размер шрифта..."
+
+msgid "Privacy warning..."
+msgstr "О приватности..."
+
+msgid "Donate"
+msgstr "Поддержать"
+
+msgid "Stop due to length limit..."
+msgstr "Остановка, превышен лимит длинны текста..."
+
+msgid "Message..."
+msgstr "Сообщение..."
+
+msgid "This dialog closed due to timeout."
+msgstr "Этот диалог закрыт, истекло время хранения."
+
+msgid "Settings..."
+msgstr "Настройки..."
+
+msgid "New chat..."
+msgstr "Новый диалог..."
+
+msgid "Keyboard..."
+msgstr "Клавиатура..."
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Swipe chat from right to left to delete."
+msgstr "Проведите по диалогу справа налево чтобы удалить."
+
+msgid "There's no started chats. Use button above to start new one."
+msgstr "У вас нет начатых диалогов. Используйте кнопку выше, чтобы начать один."
+
+msgid "New message:"
+msgstr "Сообщение:"
+
+msgid "Start dialog:"
+msgstr "Начать диалог:"
+
+msgid "Chats:"
+msgstr "Диалоги:"
+
+msgid "Settings:"
+msgstr "Настройки:"
+
+msgid "Processing..."
+msgstr "Обработка..."
+
+msgid "Send"
+msgstr "Отправить"
+
+msgid "Before using this app..."
+msgstr "Прежде чем начать..."
+
+msgid "All data that you provide to this application will be sent to OpenAI to proceed with GPT-3 AI model. Keep in mind that all conversions may be used by OpenAI team to train next generations of ChatGPT. Do not share any personal or secret information with ChatGPT."
+msgstr "Все данные, набранные в данном приложении, будут переданы в OpenAI для обработки AI-моделью GPT-3. Имейте ввиду, что ваши диалоги могут быть использованы командой OpenAI для дальнейшего обучения ChatGPT. Не передавайте личную или секретную информацию боту."
+
+msgid "Also, keep in mind that ChatGPT isn't totally perfect, and it can generate incorrect information, may produce offensive or biased content. Developer of \"AI-Chat\" only provide access to ChatGPT, and didn't responsible for any content that is generated with this tool."
+msgstr "Также, имейте ввиду, что ChatGPT не является идеальным, и может сгенерировать неверный или оскорбительный ответ. Разработчик \"AI-Chat\" только предоставляет доступ к ChatGPT и не несёт ответственности за любой созданный им контент"
+
+msgid "Continue only of you agree with all of this"
+msgstr "Продолжайте только если вы согласны с написанным выше"
+
+msgid "Continue"
+msgstr "Продолжить"
