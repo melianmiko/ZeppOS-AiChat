@@ -6,7 +6,7 @@
     "appType": "app",
     "version": {
       "code": 1,
-      "name": "1.1.0"
+      "name": "1.1.1"
     },
     "icon": "icon.png",
     "vender": "zepp",
@@ -116,6 +116,35 @@
         {
           "name": "gts-4-mini-2",
           "deviceSource": 247
+        }
+      ]
+    },
+    "bip-5": {
+      "module": {
+        "page": {
+          "pages": [
+            "page/HomeScreen",
+            "page/KeyboardScreen",
+            "page/ChatViewScreen",
+            "page/SettingsScreen",
+            "page/AboutScreen",
+            "page/ScreenBoardSetup",
+            "page/PrivacyWarningScreen",
+            "page/FontSetupScreen",
+            "page/DonateScreen"
+          ]
+        },
+        "app-side": {
+          "path": "app-side/index"
+        },
+        "setting": {
+          "path": "setting/index"
+        }
+      },
+      "platforms": [
+        {
+          "name": "bip-5",
+          "deviceSource": 8454401
         }
       ]
     },

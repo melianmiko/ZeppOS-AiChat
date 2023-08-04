@@ -6,6 +6,7 @@ import os
 project = Path(".").resolve()
 common_assets = project / "assets" / "common"
 library_assets = project / "lib" / "mmk" / "assets"
+low_ram_devices = ["band-7", "mi-band-7"]
 
 pages = [
   "HomeScreen",
@@ -35,8 +36,12 @@ with open("app.json", "r") as f:
 # Prepare assets
 for target_id in app_json["targets"]:
   icon_size = 32
-  if target_id == "band-7":
+  qr_file = "qr_normal.png"
+
+  if target_id in low_ram_devices:
     icon_size = 24
+    qr_file = "qr_small.png"
+
   assets_dir = project / "assets" / target_id
   if assets_dir.is_dir():
     shutil.rmtree(assets_dir)
@@ -45,10 +50,6 @@ for target_id in app_json["targets"]:
   # Misc files
   shutil.copytree(common_assets / f"menu_{icon_size}", assets_dir / "menu")
   shutil.copytree(library_assets / "screen_board", assets_dir / "screen_board")
-
-  qr_file = "qr_normal.png"
-  if target_id == "band-7":
-    qr_file = "qr_small.png"
 
   shutil.copy(common_assets / "icon.png", assets_dir / "icon.png")
   shutil.copy(common_assets / qr_file, assets_dir / "qr.png")
