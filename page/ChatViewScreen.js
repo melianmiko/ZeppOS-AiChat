@@ -47,7 +47,7 @@ class ChatViewScreen extends ConfiguredListScreen {
     buildFooter() {
         this.downOffset = 0;
 
-        switch (this.data.finish_reason) {
+        switch (this.partial.finish_reason) {
             case "length":
                 this.message({role: "system", content: t("Stop due to length limit...")});
                 break;
@@ -128,6 +128,11 @@ class ChatViewScreen extends ConfiguredListScreen {
             case "system":
                 cfg.align = hmUI.align.CENTER_H;
                 cfg.color = 0x0099FF;
+                cfg.fontSize = this.fontSize - 4;
+                break;
+            case "donate":
+                cfg.align = hmUI.align.CENTER_H;
+                cfg.color = 0xF48FB1;
                 cfg.fontSize = this.fontSize - 4;
                 break;
             case "error":

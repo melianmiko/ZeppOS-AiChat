@@ -3,6 +3,7 @@ import {ScreenBoard} from "../lib/mmk/ScreenBoard";
 import {Path} from "../lib/mmk/Path";
 import {SERVER, SERVER_AUTH_KEY} from "../lib/constants";
 import {getTbaToken} from "../lib/auth";
+import {getDeviceInfo} from "../lib/deviceInfoExporter";
 
 const { fetch, config } = getApp()._options.globalData;
 
@@ -25,6 +26,7 @@ class KeyboardScreen {
         this.lock = true;
         this.board.confirmButtonText = t("Processing...");
 
+        let status;
         fetch(`${SERVER}/chat`, {
             method: "POST",
             headers: {
@@ -33,17 +35,15 @@ class KeyboardScreen {
             },
             body: JSON.stringify({
                 context_id: this.params.context_id ? this.params.context_id : null,
-                message: this.board.value
+                message: this.board.value,
+                device: getDeviceInfo()
             })
         }).then((r) => {
-            if(r.status !== 200) {
-                return hmUI.showToast({
-                    text: "Server-side error..."
-                })
-            }
+            status = r.status;
             return r.json();
         }).then((data) => {
-            this.prepareFile(data.context_id);
+            if(status !== 200) return this.onError(data, status);
+            this.prepareFile(data);
             hmApp.reloadPage({
                 url: "page/ChatViewScreen",
                 param: JSON.stringify({context_id: data.context_id})
@@ -51,23 +51,36 @@ class KeyboardScreen {
         })
     }
 
-    prepareFile(context_id) {
+    onError(data, status) {
+        let message = "Server-side error";
+        if(status === 429) message = "Too many requests";
+        else if(data && data.error) message = data.error;
+
+        hmUI.showToast({text: message});
+
+        this.board.confirmButtonText = t("Send");
+        this.lock = false;
+    }
+
+    prepareFile(data) {
+        const context_id = data.context_id;
         const file = new Path("data", `${context_id}.json`);
 
-        let data = [];
+        let fileData = [];
         try {
-            data = file.fetchJSON();
+            fileData = file.fetchJSON();
         } catch (_) {}
 
-        if(data.length === 0) {
+        if(fileData.length === 0) {
             const chats = config.get("chats", []);
             chats.push({id: context_id, title: this.board.value.substring(0, 20)});
             config.set("chats", chats);
         }
 
-        data.push({role: "user", content: this.board.value});
-        data.push({role: "assistant", content: "..."});
-        file.overrideWithJSON(data);
+        fileData.push({role: "user", content: this.board.value});
+        if(data.server_message) fileData.push(data.server_message);
+        fileData.push({role: "assistant", content: "..."});
+        file.overrideWithJSON(fileData);
     }
 }
 
