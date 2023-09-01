@@ -416,6 +416,35 @@
         }
       }
     },
+    "cheetah-square": {
+      "platforms": [
+        {
+          "name": "cheetah-square",
+          "deviceSource": 8257793
+        }
+      ],
+      "module": {
+        "page": {
+          "pages": [
+            "page/HomeScreen",
+            "page/KeyboardScreen",
+            "page/ChatViewScreen",
+            "page/SettingsScreen",
+            "page/AboutScreen",
+            "page/ScreenBoardSetup",
+            "page/PrivacyWarningScreen",
+            "page/FontSetupScreen",
+            "page/DonateScreen"
+          ]
+        },
+        "app-side": {
+          "path": "app-side/index"
+        },
+        "setting": {
+          "path": "setting/index"
+        }
+      }
+    },
     "gtr-3-pro": {
       "platforms": [
         {
