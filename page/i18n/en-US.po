@@ -46,9 +46,6 @@ msgstr ""
 msgid "Chats:"
 msgstr ""
 
-msgid "Chats:"
-msgstr ""
-
 msgid "Settings:"
 msgstr ""
 
