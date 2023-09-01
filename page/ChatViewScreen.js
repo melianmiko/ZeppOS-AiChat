@@ -97,7 +97,10 @@ class ChatViewScreen extends ConfiguredListScreen {
             if(data == null) return this.buildFooter();
 
             if(data.role === "error") {
-                console.log("ERROR");
+                console.log("error message");
+                console.log(data.content)
+                this.message({role: "error", content: data.content})
+                this.scrollDown();
                 return;
             }
 
@@ -109,7 +112,7 @@ class ChatViewScreen extends ConfiguredListScreen {
             console.log(e);
             this.message({role: "error", content: String(e)})
             this.scrollDown();
-        })
+        });
     }
 
     message(obj, compact) {
