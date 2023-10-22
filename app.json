@@ -119,6 +119,43 @@
         }
       ]
     },
+    "balance": {
+      "module": {
+        "page": {
+          "pages": [
+            "page/HomeScreen",
+            "page/KeyboardScreen",
+            "page/ChatViewScreen",
+            "page/SettingsScreen",
+            "page/AboutScreen",
+            "page/ScreenBoardSetup",
+            "page/PrivacyWarningScreen",
+            "page/FontSetupScreen",
+            "page/DonateScreen"
+          ]
+        },
+        "app-side": {
+          "path": "app-side/index"
+        },
+        "setting": {
+          "path": "setting/index"
+        }
+      },
+      "platforms": [
+        {
+          "name": "b1",
+          "deviceSource": 8519936
+        },
+        {
+          "name": "b2",
+          "deviceSource": 8519937
+        },
+        {
+          "name": "b3",
+          "deviceSource": 8519939
+        }
+      ]
+    },
     "bip-5": {
       "module": {
         "page": {

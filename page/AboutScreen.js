@@ -8,6 +8,7 @@ class AboutScreen extends BaseAboutScreen {
         super();
 
         this.appId = FsTools.getAppTags()[0];
+        this.iconFile = "icon_about.png";
         this.iconSize = 100;
         this.appName = "AI-Chat";
         this.version = VERSION;
