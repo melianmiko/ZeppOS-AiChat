@@ -1,0 +1,86 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: zeppchat\n"
+"X-Crowdin-Project-ID: 611699\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: en-US.po\n"
+"X-Crowdin-File-ID: 67\n"
+"Project-Id-Version: zeppchat\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"PO-Revision-Date: 2023-10-22 15:23\n"
+
+msgid "About..."
+msgstr "Über..."
+
+msgid "Font size..."
+msgstr "Tastaturgröße..."
+
+msgid "Privacy warning..."
+msgstr "Privatsphäre Hinweise..."
+
+msgid "Donate"
+msgstr "Spenden"
+
+msgid "Stop due to length limit..."
+msgstr "Text ist zu lang..."
+
+msgid "Message..."
+msgstr "Nachricht..."
+
+msgid "This dialog closed due to timeout."
+msgstr "Der Dialog wurde aufgrund von der Zeit geschlossen."
+
+msgid "Settings..."
+msgstr "Einstellungen..."
+
+msgid "New chat..."
+msgstr "Neuer Chat..."
+
+msgid "Keyboard..."
+msgstr "Tastatur..."
+
+msgid "Delete"
+msgstr "Löschen"
+
+msgid "Swipe chat from right to left to delete."
+msgstr "Wische von rechts nach links um den Chat zu löschen."
+
+msgid "There's no started chats. Use button above to start new one."
+msgstr "Es sind keine begonnenen Chats vorhanden. Nutze den Knopf oben um einen neuen Chat zu starten."
+
+msgid "New message:"
+msgstr "Neue Nachricht:"
+
+msgid "Start dialog:"
+msgstr "Starte das Gespräch:"
+
+msgid "Chats:"
+msgstr "Chats:"
+
+msgid "Settings:"
+msgstr "Einstellungen:"
+
+msgid "Processing..."
+msgstr "Verarbeiten..."
+
+msgid "Send"
+msgstr "Senden"
+
+msgid "Before using this app..."
+msgstr "Vor dem Nutzen dieser App..."
+
+msgid "All data that you provide to this application will be sent to OpenAI to proceed with GPT-3 AI model. Keep in mind that all conversions may be used by OpenAI team to train next generations of ChatGPT. Do not share any personal or secret information with ChatGPT."
+msgstr "Alle Daten die du mit dieser Applikation teilst werden zu OpenAI gesendet und in ihrem GPT-3 AI Modell eventuell verwendet. Denke daran, dass alle Chats eventuell von dem OpenAI Team genutzt werden können um die nächsten Generationen von ChatGPT zu trainieren. Teile keine privaten oder persönlichen Informationen mit ChatGPT."
+
+msgid "Also, keep in mind that ChatGPT isn't totally perfect, and it can generate incorrect information, may produce offensive or biased content. Developer of \"AI-Chat\" only provide access to ChatGPT, and didn'tresponsible for any content that is generated with this tool."
+msgstr "Denke auch daran, dass ChatGPT nicht perfekt ist. Es kann Falschinformationen oder offensive, voreinenommene Antworten erstellen. Die Entwickler von \"AI-Chat\" geben lediglich den Zugang zu ChatGPT und sind nicht in irgendeiner Form verantwortlich, für den Kontent, der mit dieser Applikation erstellt wird."
+
+msgid "Continue only of you agree with all of this"
+msgstr "Drücke weiter, wenn du mit diesen Informationen einverstanden bist"
+
+msgid "Continue"
+msgstr "Weiter"
+

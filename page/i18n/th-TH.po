@@ -1,0 +1,86 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: zeppchat\n"
+"X-Crowdin-Project-ID: 611699\n"
+"X-Crowdin-Language: th\n"
+"X-Crowdin-File: en-US.po\n"
+"X-Crowdin-File-ID: 67\n"
+"Project-Id-Version: zeppchat\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Thai\n"
+"Language: th_TH\n"
+"PO-Revision-Date: 2023-10-22 15:23\n"
+
+msgid "About..."
+msgstr "เกี่ยวกับ"
+
+msgid "Font size..."
+msgstr "ขนาดตัวอักษร."
+
+msgid "Privacy warning..."
+msgstr "คำเตือนเกี่ยวกับความเป็นส่วนตัว"
+
+msgid "Donate"
+msgstr "โดเนท"
+
+msgid "Stop due to length limit..."
+msgstr "มีข้อจำกัดสูงสุดเกี่ยวกับจำนวนตัวอักษร"
+
+msgid "Message..."
+msgstr "ข้อความ"
+
+msgid "This dialog closed due to timeout."
+msgstr "การสนทนานี้ถูกปิดเนื่องจากหมดเวลา."
+
+msgid "Settings..."
+msgstr "การตั้งค่า..."
+
+msgid "New chat..."
+msgstr "เเชทใหม่"
+
+msgid "Keyboard..."
+msgstr "คีย์บอร์ด"
+
+msgid "Delete"
+msgstr "ลบ"
+
+msgid "Swipe chat from right to left to delete."
+msgstr "ปัดแชทจากขวาไปซ้ายเพื่อลบ"
+
+msgid "There's no started chats. Use button above to start new one."
+msgstr "ไม่มีการสนทนาที่เริ่มต้น โปรดใช้ปุ่มด้านบนเพื่อเริ่มสนทนาใหม่."
+
+msgid "New message:"
+msgstr "ข้อความใหม่"
+
+msgid "Start dialog:"
+msgstr "เริ่มการสนทนา"
+
+msgid "Chats:"
+msgstr "ข้อความ"
+
+msgid "Settings:"
+msgstr "การตั้งค่า"
+
+msgid "Processing..."
+msgstr "กำลังประมวลผล"
+
+msgid "Send"
+msgstr "ส่ง"
+
+msgid "Before using this app..."
+msgstr "ก่อนใช้แอพนี้..."
+
+msgid "All data that you provide to this application will be sent to OpenAI to proceed with GPT-3 AI model. Keep in mind that all conversions may be used by OpenAI team to train next generations of ChatGPT. Do not share any personal or secret information with ChatGPT."
+msgstr "ข้อมูลทั้งหมดที่คุณให้ในแอปพลิเคชันนี้จะถูกส่งไปที่ OpenAI เพื่อดำเนินการด้วยโมเดล AI GPT-3 โปรดจำไว้ว่าการสนทนาทั้งหมดอาจถูกทีม OpenAI ใช้เพื่อฝึกฝนรุ่นต่อไปของ ChatGPT โปรดอย่าเปิดเผยข้อมูลส่วนบุคคลหรือข้อมูลลับใดๆ กับ ChatGPT นี้"
+
+msgid "Also, keep in mind that ChatGPT isn't totally perfect, and it can generate incorrect information, may produce offensive or biased content. Developer of \"AI-Chat\" only provide access to ChatGPT, and didn'tresponsible for any content that is generated with this tool."
+msgstr "เช่นเดียวกับที่คุณได้กล่าวมา โปรแกรม ChatGPT ไม่เสถียรอย่างแท้จริง และมีโอกาสที่จะสร้างข้อมูลที่ไม่ถูกต้อง อาจสร้างเนื้อหาที่ไม่เหมาะสมหรือมีความเอียงข้อความ นักพัฒนาของ \"AI-Chat\" เพียงแค่ให้การเข้าถึง ChatGPT เท่านั้น และไม่รับผิดชอบต่อเนื้อหาที่ถูกสร้างขึ้นด้วยเครื่องมือนี้"
+
+msgid "Continue only of you agree with all of this"
+msgstr "เริ่มต้นเพียงคุณเห็นด้วยกับทุกอย่างนี้"
+
+msgid "Continue"
+msgstr "เริ่มต้น"
+
