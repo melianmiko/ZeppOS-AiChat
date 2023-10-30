@@ -6,7 +6,7 @@
     "appType": "app",
     "version": {
       "code": 1,
-      "name": "1.2.0"
+      "name": "1.2.1"
     },
     "icon": "icon.png",
     "vender": "zepp",
@@ -116,6 +116,68 @@
         {
           "name": "gts-4-mini-2",
           "deviceSource": 247
+        }
+      ]
+    },
+    "active": {
+      "module": {
+        "page": {
+          "pages": [
+            "page/HomeScreen",
+            "page/KeyboardScreen",
+            "page/ChatViewScreen",
+            "page/SettingsScreen",
+            "page/AboutScreen",
+            "page/ScreenBoardSetup",
+            "page/PrivacyWarningScreen",
+            "page/FontSetupScreen",
+            "page/DonateScreen"
+          ]
+        },
+        "app-side": {
+          "path": "app-side/index"
+        },
+        "setting": {
+          "path": "setting/index"
+        }
+      },
+      "platforms": [
+        {
+          "name": "act",
+          "deviceSource": 8323328
+        }
+      ]
+    },
+    "active_edge": {
+      "module": {
+        "page": {
+          "pages": [
+            "page/HomeScreen",
+            "page/KeyboardScreen",
+            "page/ChatViewScreen",
+            "page/SettingsScreen",
+            "page/AboutScreen",
+            "page/ScreenBoardSetup",
+            "page/PrivacyWarningScreen",
+            "page/FontSetupScreen",
+            "page/DonateScreen"
+          ]
+        },
+        "app-side": {
+          "path": "app-side/index"
+        },
+        "setting": {
+          "path": "setting/index"
+        }
+      },
+      "platforms": [
+        {
+          "name": "acte",
+          "deviceSource": 8388864
+        },
+        {
+          "name": "acte2",
+          "deviceSource": 8388865
         }
       ]
     },

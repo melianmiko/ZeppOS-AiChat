@@ -14,6 +14,7 @@ class KeyboardScreen {
 
     start() {
         this.board = new ScreenBoard();
+        if(this.params.value) this.board.value = this.params.value;
         this.board.title = t(this.params.context_id ? "New message:" : "Start dialog:");
         this.board.confirmButtonText = t("Send");
         this.board.onConfirm = () => this.process();

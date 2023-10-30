@@ -44,6 +44,22 @@ class ChatViewScreen extends ConfiguredListScreen {
         hmApp.setLayerY(this.lastLayerY);
     }
 
+    buildErrorFooter() {
+
+        this.offset(16);
+        this.row({
+            text: t("Try again"),
+            icon: "menu/message.png",
+            callback: () => hmApp.reloadPage({
+                url: "page/KeyboardScreen",
+                param: JSON.stringify({
+                    ...this.params,
+                    value: this._getLastUserMessage().content,
+                })
+            })
+        })
+    }
+
     buildFooter() {
         this.downOffset = 0;
 
@@ -100,6 +116,7 @@ class ChatViewScreen extends ConfiguredListScreen {
                 console.log("error message");
                 console.log(data.content)
                 this.message({role: "error", content: data.content})
+                this.buildErrorFooter();
                 this.scrollDown();
                 return;
             }
@@ -111,6 +128,7 @@ class ChatViewScreen extends ConfiguredListScreen {
         }).catch((e) => {
             console.log(e);
             this.message({role: "error", content: String(e)})
+            this.buildErrorFooter();
             this.scrollDown();
         });
     }
@@ -153,6 +171,14 @@ class ChatViewScreen extends ConfiguredListScreen {
         };
 
         return view;
+    }
+
+    _getLastUserMessage() {
+        let i;
+        for(i = this.data.length - 1; i >= 0; i--)
+            if(this.data[i].role === "user")
+                break;
+        return this.data[i];
     }
 }
 

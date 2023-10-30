@@ -16,6 +16,8 @@ target_icon_size = {
   "t-rex-ultra": 124,
   "gtr-mini": 124,
   "bip-5": 124,
+  "active": 248,
+  "active_edge": 248,
   "balance": 248,
   "gtr-4": 248,
   "gts-4": 124,
