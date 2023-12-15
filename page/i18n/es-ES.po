@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2023-10-22 15:23\n"
+"PO-Revision-Date: 2023-12-15 08:17\n"
 
 msgid "About..."
 msgstr "Acerca de..."
@@ -80,6 +80,9 @@ msgstr "Además, ten en cuenta que ChatGPT no es totalmente perfecto y puede gen
 
 msgid "Continue only of you agree with all of this"
 msgstr "Continúa solo si estás de acuerdo con todo esto"
+
+msgid "Try again"
+msgstr "Español"
 
 msgid "Continue"
 msgstr "Continuar"

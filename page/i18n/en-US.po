@@ -67,5 +67,8 @@ msgstr ""
 msgid "Continue only of you agree with all of this"
 msgstr ""
 
+msgid "Try again"
+msgstr ""
+
 msgid "Continue"
 msgstr ""

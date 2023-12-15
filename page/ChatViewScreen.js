@@ -45,7 +45,6 @@ class ChatViewScreen extends ConfiguredListScreen {
     }
 
     buildErrorFooter() {
-
         this.offset(16);
         this.row({
             text: t("Try again"),

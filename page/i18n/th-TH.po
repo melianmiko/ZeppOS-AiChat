@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2023-10-22 15:23\n"
+"PO-Revision-Date: 2023-12-15 08:17\n"
 
 msgid "About..."
 msgstr "เกี่ยวกับ"
@@ -80,6 +80,9 @@ msgstr "เช่นเดียวกับที่คุณได้กล่
 
 msgid "Continue only of you agree with all of this"
 msgstr "เริ่มต้นเพียงคุณเห็นด้วยกับทุกอย่างนี้"
+
+msgid "Try again"
+msgstr "ลองอีกครั้ง"
 
 msgid "Continue"
 msgstr "เริ่มต้น"

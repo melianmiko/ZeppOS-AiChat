@@ -53,7 +53,8 @@ class KeyboardScreen {
     }
 
     onError(data, status) {
-        let message = "Server-side error";
+        console.log(`ERR ${status} ${data}`);
+        let message = "Unknown error";
         if(status === 429) message = "Too many requests";
         else if(data && data.error) message = data.error;
 

@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Czech\n"
 "Language: cs_CZ\n"
-"PO-Revision-Date: 2023-10-22 15:23\n"
+"PO-Revision-Date: 2023-12-15 08:17\n"
 
 msgid "About..."
 msgstr "O Aplikaci..."
@@ -80,6 +80,9 @@ msgstr "Také pamatujte, že ChatGPT není perfektní a může generovat nesprá
 
 msgid "Continue only of you agree with all of this"
 msgstr "Pokračujte pouze pokud se vším souhlasíte"
+
+msgid "Try again"
+msgstr ""
 
 msgid "Continue"
 msgstr "Pokračovat"
