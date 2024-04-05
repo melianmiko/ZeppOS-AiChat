@@ -1,0 +1,89 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: zeppchat\n"
+"X-Crowdin-Project-ID: 611699\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: en-US.po\n"
+"X-Crowdin-File-ID: 67\n"
+"Project-Id-Version: zeppchat\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"PO-Revision-Date: 2024-04-05 05:08\n"
+
+msgid "About..."
+msgstr "关于"
+
+msgid "Font size..."
+msgstr "字体的大小"
+
+msgid "Privacy warning..."
+msgstr "条款警告。"
+
+msgid "Donate"
+msgstr "捐"
+
+msgid "Stop due to length limit..."
+msgstr "由于长度限制而停止"
+
+msgid "Message..."
+msgstr "消息"
+
+msgid "This dialog closed due to timeout."
+msgstr "该对话框因超时而关闭。"
+
+msgid "Settings..."
+msgstr "设置..."
+
+msgid "New chat..."
+msgstr "新的聊天"
+
+msgid "Keyboard..."
+msgstr "键盘"
+
+msgid "Delete"
+msgstr "删掉"
+
+msgid "Swipe chat from right to left to delete."
+msgstr "从右向左滑动聊天可以删除。"
+
+msgid "There's no started chats. Use button above to start new one."
+msgstr "没有开始聊天。 点击上面的按钮开始新的一个。"
+
+msgid "New message:"
+msgstr "新的消息："
+
+msgid "Start dialog:"
+msgstr "启动对话框"
+
+msgid "Chats:"
+msgstr "聊天："
+
+msgid "Settings:"
+msgstr "设置"
+
+msgid "Processing..."
+msgstr "加工"
+
+msgid "Send"
+msgstr "传送"
+
+msgid "Before using this app..."
+msgstr "在使用此应用程序之前.."
+
+msgid "All data that you provide to this application will be sent to OpenAI to proceed with GPT-3 AI model. Keep in mind that all conversions may be used by OpenAI team to train next generations of ChatGPT. Do not share any personal or secret information with ChatGPT."
+msgstr "您向此应用程序提供的所有数据都将发送到 OpenAI 以继续处理 GPT-3 AI 模型。 请记住，OpenAI 团队可能会使用所有转换来训练下一代 ChatGPT。 请勿与 ChatGPT 分享任何个人或秘密信息。"
+
+msgid "Also, keep in mind that ChatGPT isn't totally perfect, and it can generate incorrect information, may produce offensive or biased content. Developer of \"AI-Chat\" only provide access to ChatGPT, and didn'tresponsible for any content that is generated with this tool."
+msgstr "另外，请记住，ChatGPT 并不完全完美，它可能会生成不正确的信息，可能会产生令人反感或有偏见的内容。 “AI-Chat”开发者仅提供ChatGPT的访问权限，对使用该工具生成的任何内容不承担任何责任。"
+
+msgid "Continue only of you agree with all of this"
+msgstr "只有您同意这一切才能继续"
+
+msgid "Try again"
+msgstr "再试一次。"
+
+msgid "Continue"
+msgstr "继续"
+
