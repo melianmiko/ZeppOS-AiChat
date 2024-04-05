@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2023-12-15 08:17\n"
+"PO-Revision-Date: 2024-04-05 05:21\n"
 
 msgid "About..."
 msgstr "關於..."
@@ -80,6 +80,9 @@ msgstr "另外，請記住，ChatGPT 並不完全完美，它可能會產生不�
 
 msgid "Continue only of you agree with all of this"
 msgstr "只有您同意這一切才能繼續"
+
+msgid "Try again"
+msgstr ""
 
 msgid "Continue"
 msgstr "繼續"
