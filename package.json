@@ -1,14 +1,22 @@
 {
-  "name": "empty",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@zeppos/device-types": "^1.0.0"
-  }
+    "name": "new",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "build": "zeusx build",
+        "dev": "zeusx dev",
+        "preview": "zeusx preview",
+        "bridge": "zeusx bridge"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@zeppos/device-types": "^3.0.0",
+        "zeppos-device-types-v1": "^1.0.9",
+        "zeusx": ">=0.2.0"
+    },
+    "dependencies": {
+        "mzfw": "file:../mzfw/package/mzfw-1.0.0.tgz"
+    }
 }
