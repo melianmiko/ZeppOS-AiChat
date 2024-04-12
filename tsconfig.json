@@ -1,9 +1,9 @@
 {
     "include": [
-        "./page/*.ts",
-        "./page/**/*.ts",
-        "./app-service/*.ts",
-        "./app.ts"
+        "./**/*.ts"
+    ],
+    "exclude": [
+        "node_modules"
     ],
     "files": [
         "./global.d.ts"

@@ -5,10 +5,11 @@ import {getText as t} from "mzfw/zosx/i18n";
 import {ListView} from "mzfw/device/UiListView";
 import {Component} from "mzfw/device/UiComponent";
 import {SERVER_AUTH_KEY, SERVER_BASE_URL} from "./shared/constants";
-import {getTbaToken, getSharedDeviceData} from "./shared/Tools";
+import {getTbaToken, getSharedDeviceData, getRequestHeaders} from "./shared/Tools";
 import {saveNewMessageToFile} from "./shared/saveNewMessageToFile";
 import {replace} from "mzfw/zosx/router";
 import {showToast} from "mzfw/zosx/interaction";
+import {ServerChatResponse} from "./types/ServerResponse";
 
 class InputKeyboardScreen extends ListView<IMEProps> {
   private board: ScreenBoard | null = null;
@@ -31,24 +32,22 @@ class InputKeyboardScreen extends ListView<IMEProps> {
     this.board.confirmButtonText = t("Processing...");
     this.lock = true;
 
-    // TODO: v2 API
-    let status = 0;
-    fetch(`${SERVER_BASE_URL}/chat`, {
+    let status: number;
+    fetch(`${SERVER_BASE_URL}/api/v2/chat`, {
       method: "POST",
+      body: message,
       headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Token ${getTbaToken(SERVER_AUTH_KEY)}`
+        "Content-Type": "text/plain",
+        "Context-ID": this.props.id ?? "0",
+        ...getRequestHeaders(),
       },
-      body: JSON.stringify({
-        context_id: this.props.id != "0" ? this.props.id : null,
-        message,
-        device: getSharedDeviceData()
-      })
     }).then((r) => {
       status = r.status;
-      return r.json();
-    }).then((data) => {
-      if(status !== 200) return this.onError(data, status);
+      return (status == 0 || status >= 500) ? null : r.json();
+    }).then((data: ServerChatResponse) => {
+      if(status !== 200 || !data.result)
+        return this.onError(data, status);
+
       saveNewMessageToFile(data, message);
       replace({
         url: "page/ChatViewScreen",
@@ -57,7 +56,7 @@ class InputKeyboardScreen extends ListView<IMEProps> {
     })
   }
 
-  private onError(data: any, status: number) {
+  private onError(data: ServerChatResponse, status: number) {
     console.log(`ERR ${status} ${data}`);
     let message = "Unknown error";
     if(status === 429) message = "Too many requests";

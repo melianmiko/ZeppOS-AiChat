@@ -38,6 +38,7 @@
                     "pages": [
                         "page/SplashScreen",
                         "page/HomePageScreen",
+                        "page/NewsViewPage",
                         "page/PrivacyWarningScreen",
                         "page/ChatViewScreen",
                         "page/InputKeyboardScreen"
@@ -79,6 +80,7 @@
                     "pages": [
                         "page/SplashScreen",
                         "page/HomePageScreen",
+                        "page/NewsViewPage",
                         "page/PrivacyWarningScreen",
                         "page/ChatViewScreen",
                         "page/InputKeyboardScreen"

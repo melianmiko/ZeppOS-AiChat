@@ -1,8 +1,16 @@
 import {DeviceInfo} from "mzfw/device/UiProperties";
+import {SERVER_AUTH_KEY} from "./constants";
 
 export type DeviceInfoBundle = {
   id: string,
   name: string,
+}
+
+export function getRequestHeaders(): {[key: string]: string} {
+  return {
+    "Authorization": `Token ${getTbaToken(SERVER_AUTH_KEY)}`,
+    "Device": `${DeviceInfo.deviceName};${localStorage.getItem("device_id") ?? "0"}`
+  }
 }
 
 export function getSharedDeviceData(): DeviceInfoBundle {

@@ -17,7 +17,10 @@ export function createImeSelectBar(id: string, useReplace: boolean = true): Acti
         icon: "keyboard",
         onClick: () => continueToIME("page/InputKeyboardScreen"),
       },
-      // TODO: Voice IME (v2 api)
+      // {
+      //   icon: "voice",
+      //   onClick: () => continueToIME("page/InputVoiceScreen"),
+      // },
     ]
   });
 }

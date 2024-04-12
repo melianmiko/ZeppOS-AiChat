@@ -2,7 +2,7 @@ import {ListItem, ListView, SectionHeaderComponent} from "mzfw/device/UiListView
 import {Component} from "mzfw/device/UiComponent";
 import {HeadlineButton} from "mzfw/device/UiButton";
 import {getText as t} from "mzfw/zosx/i18n";
-import {push} from "mzfw/zosx/router";
+import {push, replace} from "mzfw/zosx/router";
 import {AiChatTheme} from "./shared/AiChatTheme";
 import {ConfigStorage} from "mzfw/device/Path";
 import {ChatListRecord} from "./types/ConfigStorageTypes";
@@ -11,9 +11,11 @@ import {IS_BAND_7, IS_SMALL_SCREEN_DEVICE, SCREEN_HEIGHT, SCREEN_MARGIN, WIDGET_
 import {createImeSelectBar} from "./shared/createImeSelectBar";
 import {align} from "mzfw/zosx/ui";
 import {ImageComponent} from "mzfw/device/UiNativeComponents/UiImageComponent";
+import {ServerNewsEntry} from "./types/ServerResponse";
 
 type HomePageParams = {
   isOnline: boolean,
+  news: ServerNewsEntry | null,
 }
 
 class HomePageScreen extends ListView<HomePageParams> {
@@ -84,9 +86,7 @@ class HomePageScreen extends ListView<HomePageParams> {
    */
   protected build(): (Component<any> | null)[] {
     return [
-      // TODO: Fetch news (v2 api)
-
-      // Chats list headline
+      this.createNewsView(),
       new SectionHeaderComponent(t("Chats:")),
     ];
   }
@@ -103,16 +103,33 @@ class HomePageScreen extends ListView<HomePageParams> {
     const end = Math.min((page + 1) * 10, chats.length);
     const components: Component<any>[] = [];
     for(let i = page * 10; i < end; i++)
-      components.push(this.createChatListItem(chats[i]));
+      components.push(this.createChatListView(chats[i]));
 
     if(end == chats.length && (components.length > 0 || page == 0)) {
       // Add pre-footer
-      components.push(new TextComponent({
-        text: this.getFooterText(chats.length == 0)
-      }))
+      components.push(this.createFooterNoticeView(chats.length == 0))
     }
 
     return Promise.resolve(components);
+  }
+
+  private createNewsView(): Component<any> | null {
+    if(!this.props.news || localStorage.getItem("dismissNewsId") == this.props.news.id.toString())
+      return null;
+
+    return new ListItem({
+      icon: "news",
+      title: this.props.news.title,
+      onClick: () => push({
+        url: "page/NewsViewPage",
+        params: JSON.stringify({news: this.props.news}),
+      }),
+      secondActionName: t("Hide"),
+      onSecondActionClick: () => {
+        localStorage.setItem("dismissNewsId", this.props.news.id.toString());
+        replace({url: "page/HomePageScreen", params: JSON.stringify(this.props)});
+      }
+    });
   }
 
   /**
@@ -121,8 +138,13 @@ class HomePageScreen extends ListView<HomePageParams> {
    * @param noChats If true, will show suggestion to start a new chat
    * @private
    */
-  private getFooterText(noChats: boolean) {
-    return "sus";
+  private createFooterNoticeView(noChats: boolean): Component<any> {
+    return new TextComponent({
+      text: t(noChats
+        ? "There's no started chats. Use button above to start new one."
+        : "Swipe chat from right to left to delete."
+      )
+    });
   }
 
   /**
@@ -130,7 +152,7 @@ class HomePageScreen extends ListView<HomePageParams> {
    * @param record Record info
    * @private
    */
-  private createChatListItem(record: ChatListRecord): ListItem {
+  private createChatListView(record: ChatListRecord): ListItem {
     return new ListItem({
       title: record.name,
       icon: "chat",
@@ -142,4 +164,4 @@ class HomePageScreen extends ListView<HomePageParams> {
   }
 }
 
-Page(HomePageScreen.makePage(new HomePageScreen({isOnline: false})));
+Page(HomePageScreen.makePage(new HomePageScreen({isOnline: false, news: null})));
