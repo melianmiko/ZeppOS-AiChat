@@ -88,7 +88,7 @@ class HomePageScreen extends ListView<HomePageParams> {
     component.setGeometry(null, null, WIDGET_WIDTH, null);
 
     const ph = height ?? component.geometry.h;
-    const py = y > 0 ? y : SCREEN_HEIGHT - ph + y;
+    const py = y >= 0 ? y : SCREEN_HEIGHT - ph + y;
     component.setGeometry(SCREEN_MARGIN, py, WIDGET_WIDTH, ph);
     component.performRender();
 
@@ -148,6 +148,7 @@ class HomePageScreen extends ListView<HomePageParams> {
       secondActionName: t("Hide"),
       onSecondActionClick: () => {
         localStorage.setItem("dismissNewsId", this.props.news.id.toString());
+        (localStorage as ConfigStorage).writeChanges();
         replace({url: "page/HomePageScreen", params: JSON.stringify(this.props)});
       }
     });

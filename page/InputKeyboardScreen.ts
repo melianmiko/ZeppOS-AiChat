@@ -27,7 +27,7 @@ class InputKeyboardScreen extends ListView<IMEProps> {
   }
 
   private sendMessage(message: string) {
-    if(this.lock) return;
+    if(this.lock || !message) return;
 
     this.board.confirmButtonText = t("Processing...");
     this.lock = true;

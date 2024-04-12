@@ -99,3 +99,9 @@ msgstr ""
 
 msgid "No internet connection.\nScroll down to view previous dialogs."
 msgstr ""
+
+msgid "Messages (total):"
+msgstr ""
+
+msgid "Daily limits:"
+msgstr ""

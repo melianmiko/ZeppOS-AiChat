@@ -9,6 +9,7 @@ import {align} from "mzfw/zosx/ui";
 import {ActionBar} from "mzfw/device/UiActionBar";
 import {replace} from "mzfw/zosx/router";
 import {getText as t} from "mzfw/zosx/i18n";
+import {resetPageBrightTime, setPageBrightTime} from "mzfw/zosx/display";
 
 type ChatViewScreenProps = {
   id: string
@@ -23,6 +24,8 @@ class ChatViewScreen extends ListView<ChatViewScreenProps> {
   private chatLocked: boolean = false;
 
   protected build(): (Component<any> | null)[] {
+    setPageBrightTime({brightTime: 60000});
+
     this.storage = new ConfigStorage(this.props.id + ".json");
     this.messages = (this.storage.getItem("messages") ?? []).reverse();
     this.lastMessage = this.createMessageView(this.messages[0]);
@@ -32,6 +35,11 @@ class ChatViewScreen extends ListView<ChatViewScreenProps> {
     return [
       this.lastMessage,
     ]
+  }
+
+  performDestroy() {
+    super.performDestroy();
+    resetPageBrightTime();
   }
 
   protected buildMore(page: number): Promise<Component<any>[]> {

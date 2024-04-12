@@ -31,6 +31,10 @@ class SplashScreen extends TemplateSplashScreen {
             }
 
             this.continueParam = JSON.stringify({isOnline: true, news: body.news});
+        }).catch((e) => {
+            console.log("err", e);
+            this.continueParam = JSON.stringify({isOnline: false});
+            return null;
         })
     }
 }

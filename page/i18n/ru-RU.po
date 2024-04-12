@@ -122,3 +122,9 @@ msgstr "Задайте свой вопрос, или прокрутите вни
 
 msgid "No internet connection.\nScroll down to view previous dialogs."
 msgstr "Нет подключения к интернету.\nПрокрутите вниз для просмотра предыдущих диалогов"
+
+msgid "Messages (total):"
+msgstr "Сообщений (общий):"
+
+msgid "Daily limits:"
+msgstr "Суточный лимит:"

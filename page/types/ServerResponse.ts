@@ -19,3 +19,9 @@ export type ServerInitResponse = {
   config: {[id: string]: string},
   news: ServerNewsEntry | null,
 }
+
+export type ServerLimitsResponse = {
+  result: boolean,
+  limits: {[tag: string]: number},
+  usage: {[tag: string]: number},
+}
