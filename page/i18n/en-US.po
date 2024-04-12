@@ -61,7 +61,7 @@ msgstr ""
 msgid "All data that you provide to this application will be sent to OpenAI to proceed with GPT-3 AI model. Keep in mind that all conversions may be used by OpenAI team to train next generations of ChatGPT. Do not share any personal or secret information with ChatGPT."
 msgstr ""
 
-msgid "Also, keep in mind that ChatGPT isn't totally perfect, and it can generate incorrect information, may produce offensive or biased content. Developer of \"AI-Chat\" only provide access to ChatGPT, and didn'tresponsible for any content that is generated with this tool."
+msgid "Also, keep in mind that ChatGPT isn't totally perfect, and it can generate incorrect information, may produce offensive or biased content. Developer of \"AI-Chat\" only provide access to ChatGPT, and didn't responsible for any content that is generated with this tool."
 msgstr ""
 
 msgid "Continue only of you agree with all of this"
@@ -71,4 +71,37 @@ msgid "Try again"
 msgstr ""
 
 msgid "Continue"
+msgstr ""
+
+msgid "Layouts:"
+msgstr ""
+
+msgid "Text will look like this"
+msgstr ""
+
+msgid "Authors"
+msgstr ""
+
+msgid "Third-party libraries"
+msgstr ""
+
+msgid "Additional info"
+msgstr ""
+
+msgid "Show device info"
+msgstr ""
+
+msgid "Show build info"
+msgstr ""
+
+msgid "Main developer"
+msgstr ""
+
+msgid "Icon designer"
+msgstr ""
+
+msgid "Ask your question here, or scroll down to view previous dialogs"
+msgstr ""
+
+msgid "No internet connection.\nScroll down to view previous dialogs."
 msgstr ""

@@ -4,11 +4,11 @@ import {Component} from "mzfw/device/UiComponent";
 import {TextComponent} from "mzfw/device/UiTextComponent";
 import { AiChatTheme } from "./shared/AiChatTheme";
 
-type NewsViewPageProps = {
+type NewsViewScreemProps = {
   news: ServerNewsEntry | null
 };
 
-class NewsViewPage extends ListView<NewsViewPageProps> {
+class NewsViewScreen extends ListView<NewsViewScreemProps> {
   public theme = new AiChatTheme();
 
   protected build(): (Component<any> | null)[] {
@@ -30,4 +30,4 @@ class NewsViewPage extends ListView<NewsViewPageProps> {
   }
 }
 
-Page(ListView.makePage(new NewsViewPage({news: null})));
+Page(ListView.makePage(new NewsViewScreen({news: null})));

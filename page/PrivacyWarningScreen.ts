@@ -6,8 +6,9 @@ import {AiChatTheme} from "./shared/AiChatTheme";
 import {Button, ButtonVariant} from "mzfw/device/UiButton";
 import {replace} from "mzfw/zosx/router";
 import type {ConfigStorage} from "mzfw/device/Path";
+import {IMEProps} from "./types/CommonPagePropTypes";
 
-class PrivacyWarningScreen extends ListView<{}> {
+class PrivacyWarningScreen extends ListView<IMEProps & {continueUrl: string}> {
   public theme = new AiChatTheme();
 
   protected build(): (Component<any> | null)[] {
@@ -35,20 +36,20 @@ class PrivacyWarningScreen extends ListView<{}> {
         color: 0x999999,
         marginV: 4,
       }),
-      new Button({
+      this.props.continueUrl ? new Button({
         text: t("Continue"),
         variant: ButtonVariant.DEFAULT,
         onClick: () => {
           localStorage.setItem("privacyStatementRead", "true");
           (localStorage as ConfigStorage).writeChanges();
           replace({
-            url: "page/ChatViewScreen",
+            url: this.props.continueUrl,
             params: JSON.stringify(this.props)
           });
         }
-      }),
+      }) : null,
     ];
   }
 }
 
-Page(ListView.makePage(new PrivacyWarningScreen({})));
+Page(ListView.makePage(new PrivacyWarningScreen({text: "", continueUrl: "", id: ""})));

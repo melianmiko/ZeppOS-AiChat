@@ -121,7 +121,7 @@ class HomePageScreen extends ListView<HomePageParams> {
       icon: "news",
       title: this.props.news.title,
       onClick: () => push({
-        url: "page/NewsViewPage",
+        url: "page/NewsViewScreen",
         params: JSON.stringify({news: this.props.news}),
       }),
       secondActionName: t("Hide"),

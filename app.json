@@ -38,10 +38,14 @@
                     "pages": [
                         "page/SplashScreen",
                         "page/HomePageScreen",
-                        "page/NewsViewPage",
+                        "page/NewsViewScreen",
                         "page/PrivacyWarningScreen",
                         "page/ChatViewScreen",
-                        "page/InputKeyboardScreen"
+                        "page/InputKeyboardScreen",
+                        "page/SettingsScreen",
+                        "page/SettingsKeyboardScreen",
+                        "page/SettingsFontSizeScreen",
+                        "page/AboutScreen"
                     ]
                 },
                 "app-side": {
@@ -80,10 +84,14 @@
                     "pages": [
                         "page/SplashScreen",
                         "page/HomePageScreen",
-                        "page/NewsViewPage",
+                        "page/NewsViewScreen",
                         "page/PrivacyWarningScreen",
                         "page/ChatViewScreen",
-                        "page/InputKeyboardScreen"
+                        "page/InputKeyboardScreen",
+                        "page/SettingsScreen",
+                        "page/SettingsKeyboardScreen",
+                        "page/SettingsFontSizeScreen",
+                        "page/AboutScreen"
                     ]
                 },
                 "app-side": {
