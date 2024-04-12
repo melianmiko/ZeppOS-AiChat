@@ -46,7 +46,7 @@ msgid "Delete"
 msgstr "Usuń"
 
 msgid "Swipe chat from right to left to delete."
-msgstr "Przesuń chat z prawej to lewej, aby go usunąć."
+msgstr "Przesuń chat z prawej do lewej, aby go usunąć."
 
 msgid "There's no started chats. Use button above to start new one."
 msgstr "Nie ma rozpoczętych chatów. Użyj przycisku powyżej, aby rozpocząć nowy."

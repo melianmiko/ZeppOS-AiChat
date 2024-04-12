@@ -93,6 +93,9 @@ msgstr "Раскладки:"
 msgid "Text will look like this"
 msgstr "Текст будет выглядеть примерно так"
 
+msgid "Restore default"
+msgstr "Вернуть стандартное"
+
 msgid "Authors"
 msgstr "Авторы"
 

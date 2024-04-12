@@ -13,16 +13,10 @@ msgstr ""
 msgid "Stop due to length limit..."
 msgstr ""
 
-msgid "Message..."
-msgstr ""
-
 msgid "This dialog closed due to timeout."
 msgstr ""
 
 msgid "Settings..."
-msgstr ""
-
-msgid "New chat..."
 msgstr ""
 
 msgid "Keyboard..."
@@ -67,9 +61,6 @@ msgstr ""
 msgid "Continue only of you agree with all of this"
 msgstr ""
 
-msgid "Try again"
-msgstr ""
-
 msgid "Continue"
 msgstr ""
 
@@ -77,6 +68,9 @@ msgid "Layouts:"
 msgstr ""
 
 msgid "Text will look like this"
+msgstr ""
+
+msgid "Restore default"
 msgstr ""
 
 msgid "Authors"

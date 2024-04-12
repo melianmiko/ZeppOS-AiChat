@@ -12,6 +12,7 @@ import {createImeSelectBar} from "./shared/createImeSelectBar";
 import {align} from "mzfw/zosx/ui";
 import {ImageComponent} from "mzfw/device/UiNativeComponents/UiImageComponent";
 import {ServerNewsEntry} from "./types/ServerResponse";
+import {rmSync} from "mzfw/zosx/fs";
 
 type HomePageParams = {
   isOnline: boolean,
@@ -25,6 +26,10 @@ class HomePageScreen extends ListView<HomePageParams> {
   protected overrideHeaderHeight: number | null = 24;
   private chatListStorage = new ConfigStorage("chat_list.json");
 
+  /**
+   * Build headline page
+   * @protected
+   */
   protected beforeListViewRender() {
     if(!this.props.isOnline)
       return this.showOfflinePage();
@@ -52,6 +57,10 @@ class HomePageScreen extends ListView<HomePageParams> {
     }), headlineHeight + (margin * 2), SCREEN_HEIGHT - headlineHeight - imeBarHeight - (margin * 4))
   }
 
+  /**
+   * No internet warning banner
+   * @private
+   */
   private showOfflinePage() {
     this.configureHeadComponent(new ImageComponent({
       src: "icon/80/offline.png",
@@ -66,6 +75,14 @@ class HomePageScreen extends ListView<HomePageParams> {
     }), SCREEN_HEIGHT / 2, SCREEN_HEIGHT / 2)
   }
 
+  /**
+   * Add component outside ListView
+   *
+   * @param component
+   * @param y
+   * @param height
+   * @private
+   */
   private configureHeadComponent(component: Component<any>, y: number, height: number | null = null) {
     component.attachParent(this);
     component.setGeometry(null, null, WIDGET_WIDTH, null);
@@ -103,7 +120,7 @@ class HomePageScreen extends ListView<HomePageParams> {
     const end = Math.min((page + 1) * 10, chats.length);
     const components: Component<any>[] = [];
     for(let i = page * 10; i < end; i++)
-      components.push(this.createChatListView(chats[i]));
+      components.push(this.createChatEntryView(chats[i]));
 
     if(end == chats.length && (components.length > 0 || page == 0)) {
       // Add pre-footer
@@ -113,6 +130,10 @@ class HomePageScreen extends ListView<HomePageParams> {
     return Promise.resolve(components);
   }
 
+  /**
+   * Create news view list item
+   * @private
+   */
   private createNewsView(): Component<any> | null {
     if(!this.props.news || localStorage.getItem("dismissNewsId") == this.props.news.id.toString())
       return null;
@@ -143,23 +164,44 @@ class HomePageScreen extends ListView<HomePageParams> {
       text: t(noChats
         ? "There's no started chats. Use button above to start new one."
         : "Swipe chat from right to left to delete."
-      )
+      ),
+      textSize: this.theme.FONT_SIZE - 2,
+      color: 0xAAAAAA,
+      alignH: align.CENTER_H,
+      marginV: 8,
     });
   }
 
   /**
    * Will create a new chat ListItem
+   *
    * @param record Record info
    * @private
    */
-  private createChatListView(record: ChatListRecord): ListItem {
+  private createChatEntryView(record: ChatListRecord): ListItem {
     return new ListItem({
       title: record.name,
       icon: "chat",
+
       onClick: () => push({
         url: "page/ChatViewScreen",
         params: JSON.stringify({id: record.id})
       }),
+
+      secondActionName: t("Delete"),
+      onSecondActionClick: () => {
+        // Delete record
+        let chats: ChatListRecord[] = this.chatListStorage.getItem("chats") ?? [];
+        chats = chats.filter((r) => r.id != record.id);
+        this.chatListStorage.setItem("chats", chats);
+        this.chatListStorage.writeChanges();
+
+        // Delete file
+        rmSync(`${record.id}.json`);
+
+        // Reload
+        replace({url: "page/HomePageScreen", params: JSON.stringify(this.props)});
+      }
     });
   }
 }
