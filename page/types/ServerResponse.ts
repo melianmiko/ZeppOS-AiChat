@@ -3,6 +3,7 @@ import {ChatMessageRecord} from "./ConfigStorageTypes";
 export type ServerChatResponse = {
   result: boolean,
   error: string,
+  message: string,
   context_id: string,
   server_message?: ChatMessageRecord,
 }

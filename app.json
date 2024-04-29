@@ -2,7 +2,7 @@
     "configVersion": "v3",
     "app": {
         "appId": 1029480,
-        "appName": "AI-Chat",
+        "appName": "AI Chat",
         "appType": "app",
         "version": {
             "code": 1,
@@ -22,7 +22,8 @@
     "defaultLanguage": "en-US",
     "withBundleGlobals": true,
     "permissions": [
-        "data:os.device.info"
+        "data:os.device.info",
+        "device:os.mic"
     ],
     "targetZeppOS": "1.0.0",
     "targets": {
@@ -42,10 +43,35 @@
                         "page/PrivacyWarningScreen",
                         "page/ChatViewScreen",
                         "page/InputKeyboardScreen",
+                        "page/InputVoiceScreen",
                         "page/SettingsScreen",
                         "page/SettingsKeyboardScreen",
                         "page/SettingsFontSizeScreen",
                         "page/AboutScreen"
+                    ]
+                },
+                "secondary-widget": {
+                    "widgets": [
+                        {
+                            "path": "secondary-widget/index",
+                            "icon": "icon.png",
+                            "name": "AI Chat",
+                            "runtime": {
+                                "type": "js"
+                            }
+                        }
+                    ]
+                },
+                "app-widget": {
+                    "widgets": [
+                        {
+                            "path": "app-widget/index",
+                            "icon": "icon.png",
+                            "name": "AI Chat",
+                            "runtime": {
+                                "type": "js"
+                            }
+                        }
                     ]
                 },
                 "app-side": {
@@ -79,28 +105,7 @@
                 "trex2",
                 "mi_band7"
             ],
-            "module": {
-                "page": {
-                    "pages": [
-                        "page/SplashScreen",
-                        "page/HomePageScreen",
-                        "page/NewsViewScreen",
-                        "page/PrivacyWarningScreen",
-                        "page/ChatViewScreen",
-                        "page/InputKeyboardScreen",
-                        "page/SettingsScreen",
-                        "page/SettingsKeyboardScreen",
-                        "page/SettingsFontSizeScreen",
-                        "page/AboutScreen"
-                    ]
-                },
-                "app-side": {
-                    "path": "app-side/index"
-                },
-                "setting": {
-                    "path": "setting/index"
-                }
-            }
+            "moduleFrom": "modern"
         }
     }
 }

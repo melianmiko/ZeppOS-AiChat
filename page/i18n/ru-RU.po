@@ -120,6 +120,9 @@ msgstr "Автор логотипа"
 msgid "Ask your question here, or scroll down to view previous dialogs"
 msgstr "Задайте свой вопрос, или прокрутите вниз для просмотра предыдущих диалогов"
 
+msgid "Ask your question here to start new AI Chat dialog"
+msgstr "Задайте свой вопрос, чтобы начать новый диалог в AI Chat"
+
 msgid "No internet connection.\nScroll down to view previous dialogs."
 msgstr "Нет подключения к интернету.\nПрокрутите вниз для просмотра предыдущих диалогов"
 

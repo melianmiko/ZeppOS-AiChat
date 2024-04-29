@@ -2,7 +2,7 @@ import {ServerChatResponse} from "../types/ServerResponse";
 import {ConfigStorage} from "mzfw/device/Path";
 import {ChatListRecord, ChatMessageRecord} from "../types/ConfigStorageTypes";
 
-export function saveNewMessageToFile(data: ServerChatResponse, message?: string) {
+export function saveNewMessageToFile(data: ServerChatResponse) {
   // Message list load
   const chatDataStorage = new ConfigStorage(data.context_id + ".json");
   const messages: ChatMessageRecord[] = chatDataStorage.getItem("messages") ?? [];
@@ -13,14 +13,14 @@ export function saveNewMessageToFile(data: ServerChatResponse, message?: string)
     const chats: ChatListRecord[] = listStorage.getItem("chats") ?? [];
     chats.push({
       id: data.context_id,
-      name: message,
+      name: data.message,
     })
     listStorage.setItem("chats", chats);
     listStorage.writeChanges();
   }
 
   // Handle data
-  messages.push({role: "user", content: message});
+  messages.push({role: "user", content: data.message});
   if(data.server_message) messages.push(data.server_message);
   messages.push({role: "assistant", content: "..."});
   chatDataStorage.setItem("messages", messages);

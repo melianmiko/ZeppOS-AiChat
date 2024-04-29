@@ -48,7 +48,7 @@ class InputKeyboardScreen extends ListView<IMEProps> {
       if(status !== 200 || !data.result)
         return this.onError(data, status);
 
-      saveNewMessageToFile(data, message);
+      saveNewMessageToFile(data);
       replace({
         url: "page/ChatViewScreen",
         params: JSON.stringify({id: data.context_id})

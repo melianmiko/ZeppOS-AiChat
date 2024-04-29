@@ -17,10 +17,10 @@ export function createImeSelectBar(id: string, useReplace: boolean = true): Acti
         icon: "keyboard",
         onClick: () => continueToIME("page/InputKeyboardScreen"),
       },
-      // {
-      //   icon: "voice",
-      //   onClick: () => continueToIME("page/InputVoiceScreen"),
-      // },
+      {
+        icon: "voice",
+        onClick: () => continueToIME("page/InputVoiceScreen"),
+      },
     ]
   });
 }
