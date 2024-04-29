@@ -26,3 +26,9 @@ export type ServerLimitsResponse = {
   limits: {[tag: string]: number},
   usage: {[tag: string]: number},
 }
+
+export type ServerVoicePrepareResponse = {
+  result: boolean,
+  error: string,
+  requiredFirmware: string,
+}

@@ -61,7 +61,7 @@ class ChatViewScreen extends ListView<ChatViewScreenProps> {
         break;
       case "system":
         cfg.alignH = align.CENTER_H;
-        cfg.color = 0x0099FF;
+        cfg.color = this.theme.ACCENT_COLOR_DARK;
         cfg.textSize = this.theme.FONT_SIZE - 4;
         break;
       case "donate":
@@ -96,13 +96,13 @@ class ChatViewScreen extends ListView<ChatViewScreenProps> {
       }
 
       if(r.status !== 200) {
-        this.chatLocked = r.status == 0;
         throw new Error(r.status == 0 ? "No internet" : `Server error, status=${r.status}`);
       }
 
       return r.json();
     }).then((data) => {
-      if(data == null) return this.buildFooter();
+      if(data == null)
+        return this.showActionBar();
 
       if(data.role === "error") {
         console.log("error message");

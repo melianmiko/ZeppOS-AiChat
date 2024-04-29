@@ -11,11 +11,13 @@ import {getText as t} from "mzfw/zosx/i18n";
 import {Button, ButtonVariant} from "mzfw/device/UiButton";
 import {SERVER_BASE_URL} from "./shared/constants";
 import {getRequestHeaders} from "./shared/Tools";
-import {ServerChatResponse, ServerLimitsResponse} from "./types/ServerResponse";
+import {ServerChatResponse, ServerVoicePrepareResponse} from "./types/ServerResponse";
 import {saveNewMessageToFile} from "./shared/saveNewMessageToFile";
 import {replace} from "mzfw/zosx/router";
 import {align} from "mzfw/zosx/ui";
+import {getSystemInfo} from "mzfw/zosx/settings";
 import TimeoutID = setTimeout.TimeoutID;
+import {resetPageBrightTime, setPageBrightTime} from "mzfw/zosx/display";
 
 const media = osImport<ZeppMediaLibrary>("@zos/media", null);
 
@@ -51,10 +53,16 @@ class InputVoiceScreen extends ListView<IMEProps> {
    * @protected
    */
   protected build(): (Component<any> | null)[] {
+    setPageBrightTime({brightTime: 60000});
     return [
       this.viewText,
       this.finishButton,
     ]
+  }
+
+  performDestroy() {
+    super.performDestroy();
+    resetPageBrightTime();
   }
 
   /**
@@ -64,17 +72,27 @@ class InputVoiceScreen extends ListView<IMEProps> {
     super.performRender();
 
     // Check limits and start recording
-    // TODO: Check firmware version
-    fetch(`${SERVER_BASE_URL}/api/v2/my_limits`, {
-      headers: getRequestHeaders()
+    fetch(`${SERVER_BASE_URL}/api/v2/voice/prepare`, {
+      headers: {
+        ...getRequestHeaders(),
+        "Device-Firmware": getSystemInfo().firmwareVersion,
+      }
     }).then((r) => {
-      if (r.status != 200) return null;
+      if (r.status != 200 && r.status != 401) {
+        this.onRequestError(null, r.status);
+        return null;
+      }
+
       return r.json();
-    }).then((d: ServerLimitsResponse) => {
-      if (!d.limits.voice) {
-        this.viewError(t("Rate limit reacted."));
+    }).then((d: ServerVoicePrepareResponse) => {
+      if(!d) return;
+      if (!d.result) {
+        this.viewError(d.error);
+        if(d.requiredFirmware)
+          this.viewMinFirmware(d.requiredFirmware);
         return;
       }
+
       this.startRecording();
     }).catch((e) => {
       console.log(e);
@@ -82,6 +100,10 @@ class InputVoiceScreen extends ListView<IMEProps> {
     })
   }
 
+  /**
+   * Start voice recording
+   * @private
+   */
   private startRecording() {
     // Delete file, if exists
     try {
@@ -169,10 +191,21 @@ class InputVoiceScreen extends ListView<IMEProps> {
     let message = "Unknown error";
     if (status === 429) message = "Too many requests";
     else if (data && data.error) message = data.error;
+
     this.viewError(message);
   }
 
-  private viewError(message: string) {
+  private viewMinFirmware(minFirmware: string) {
+    this.addComponent(new TextComponent({
+      text: t("Minimal firmware version: ") + minFirmware,
+      textSize: this.theme.FONT_SIZE - 4,
+      color: 0xAAAAAA,
+      alignH: align.CENTER_H,
+      marginV: 16,
+    }))
+  }
+
+  private viewError(message: string, icon: string = "error") {
     this.viewText.updateProps({text: message});
     if(this.finishButton) {
       this.removeComponent(this.finishButton);
