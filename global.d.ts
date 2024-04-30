@@ -1,12 +1,3 @@
-/// <reference path="node_modules/@zeppos/device-types/index.d.ts" />
-
-
-
-declare function getApp(): {
-    _options: {
-        globalData: {
-            config: any,
-            fetch: typeof fetch
-        }
-    }
-};
+import "@zeppos/device-types/dist/index.d.ts";
+import "zeppos-device-types-v1/types/index.d.ts";
+import "zeusx/app_global.d.ts";

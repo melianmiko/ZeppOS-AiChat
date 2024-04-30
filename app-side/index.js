@@ -1,18 +1,15 @@
-import {MessageBuilder} from '../lib/zeppos/message';
-import {handleFetchRequest, prepareFetch} from "../lib/mmk/FetchForward";
-
-const messageBuilder = new MessageBuilder();
+import {initMessaging} from "mzfw/shared/SideMessaging";
+import {defineAppTags} from "mzfw/shared/AppTagsProvider";
+import {initFetchProvider} from "mzfw/shared/SideFetchProvider";
 
 AppSideService({
-  onInit(props) {
-    prepareFetch(messageBuilder);
-
-    messageBuilder.listen(() => {});
-    messageBuilder.on("request", (ctx) => {
-      const request = messageBuilder.buf2Json(ctx.request.payload);
-      handleFetchRequest(ctx, request);
-    });
+  onInit() {
+    defineAppTags("app", 1029480);
+    initMessaging();
+    initFetchProvider();
   },
-  onRun() {},
-  onDestroy() {},
+
+  onDestroy() {
+    console.log("Bye-bye.");
+  }
 })

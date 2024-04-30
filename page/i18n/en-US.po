@@ -13,16 +13,10 @@ msgstr ""
 msgid "Stop due to length limit..."
 msgstr ""
 
-msgid "Message..."
-msgstr ""
-
 msgid "This dialog closed due to timeout."
 msgstr ""
 
 msgid "Settings..."
-msgstr ""
-
-msgid "New chat..."
 msgstr ""
 
 msgid "Keyboard..."
@@ -61,14 +55,83 @@ msgstr ""
 msgid "All data that you provide to this application will be sent to OpenAI to proceed with GPT-3 AI model. Keep in mind that all conversions may be used by OpenAI team to train next generations of ChatGPT. Do not share any personal or secret information with ChatGPT."
 msgstr ""
 
-msgid "Also, keep in mind that ChatGPT isn't totally perfect, and it can generate incorrect information, may produce offensive or biased content. Developer of \"AI-Chat\" only provide access to ChatGPT, and didn'tresponsible for any content that is generated with this tool."
+msgid "Also, keep in mind that ChatGPT isn't totally perfect, and it can generate incorrect information, may produce offensive or biased content. Developer of \"AI-Chat\" only provide access to ChatGPT, and didn't responsible for any content that is generated with this tool."
 msgstr ""
 
 msgid "Continue only of you agree with all of this"
 msgstr ""
 
-msgid "Try again"
+msgid "Continue"
 msgstr ""
 
-msgid "Continue"
+msgid "Layouts:"
+msgstr ""
+
+msgid "Text will look like this"
+msgstr ""
+
+msgid "Restore default"
+msgstr ""
+
+msgid "Authors"
+msgstr ""
+
+msgid "Third-party libraries"
+msgstr ""
+
+msgid "Additional info"
+msgstr ""
+
+msgid "Show device info"
+msgstr ""
+
+msgid "Show build info"
+msgstr ""
+
+msgid "Main developer"
+msgstr ""
+
+msgid "Icon designer"
+msgstr ""
+
+msgid "Ask your question here"
+msgstr ""
+
+msgid "Or scroll down to view previous dialogs"
+msgstr ""
+
+msgid "No internet connection.\nScroll down to view previous dialogs."
+msgstr ""
+
+msgid "Preparing..."
+msgstr ""
+
+msgid "Unknown error:"
+msgstr ""
+
+msgid "Too long record. Hint: use Send button when you finish your prompt."
+msgstr ""
+
+msgid "Listening..."
+msgstr ""
+
+msgid "Min firmware version: "
+msgstr ""
+
+msgid "Daily usage limit reached"
+msgstr ""
+
+msgid "Voice input for this device isn't supported now"
+msgstr ""
+
+msgid "Update device firmware to use this feature"
+msgstr ""
+
+msgid "Voice requests:"
+msgstr ""
+
+msgid "Messages (total):"
+msgstr ""
+
+msgid "Daily limits:"
 msgstr ""

@@ -1,5 +1,0 @@
-*
-!common
-!common/**/*
-!.gitignore
-!generate_icons.py

@@ -75,7 +75,7 @@ msgstr "Vor dem Nutzen dieser App..."
 msgid "All data that you provide to this application will be sent to OpenAI to proceed with GPT-3 AI model. Keep in mind that all conversions may be used by OpenAI team to train next generations of ChatGPT. Do not share any personal or secret information with ChatGPT."
 msgstr "Alle Daten die du mit dieser Applikation teilst werden zu OpenAI gesendet und in ihrem GPT-3 AI Modell eventuell verwendet. Denke daran, dass alle Chats eventuell von dem OpenAI Team genutzt werden können um die nächsten Generationen von ChatGPT zu trainieren. Teile keine privaten oder persönlichen Informationen mit ChatGPT."
 
-msgid "Also, keep in mind that ChatGPT isn't totally perfect, and it can generate incorrect information, may produce offensive or biased content. Developer of \"AI-Chat\" only provide access to ChatGPT, and didn'tresponsible for any content that is generated with this tool."
+msgid "Also, keep in mind that ChatGPT isn't totally perfect, and it can generate incorrect information, may produce offensive or biased content. Developer of \"AI-Chat\" only provide access to ChatGPT, and didn't responsible for any content that is generated with this tool."
 msgstr "Denke auch daran, dass ChatGPT nicht perfekt ist. Es kann Falschinformationen oder offensive, voreinenommene Antworten erstellen. Die Entwickler von \"AI-Chat\" geben lediglich den Zugang zu ChatGPT und sind nicht in irgendeiner Form verantwortlich, für den Kontent, der mit dieser Applikation erstellt wird."
 
 msgid "Continue only of you agree with all of this"

@@ -75,7 +75,7 @@ msgstr "Прежде чем начать..."
 msgid "All data that you provide to this application will be sent to OpenAI to proceed with GPT-3 AI model. Keep in mind that all conversions may be used by OpenAI team to train next generations of ChatGPT. Do not share any personal or secret information with ChatGPT."
 msgstr "Все данные, набранные в данном приложении, будут переданы в OpenAI для обработки AI-моделью GPT-3. Имейте ввиду, что ваши диалоги могут быть использованы командой OpenAI для дальнейшего обучения ChatGPT. Не передавайте личную или секретную информацию боту."
 
-msgid "Also, keep in mind that ChatGPT isn't totally perfect, and it can generate incorrect information, may produce offensive or biased content. Developer of \"AI-Chat\" only provide access to ChatGPT, and didn'tresponsible for any content that is generated with this tool."
+msgid "Also, keep in mind that ChatGPT isn't totally perfect, and it can generate incorrect information, may produce offensive or biased content. Developer of \"AI-Chat\" only provide access to ChatGPT, and didn't responsible for any content that is generated with this tool."
 msgstr "Также, имейте в виду, что ChatGPT не является идеальным, и может сгенерировать неверный или оскорбительный ответ. Разработчик \"AI-Chat\" только предоставляет доступ к ChatGPT и не несёт ответственности за любой созданный им контент."
 
 msgid "Continue only of you agree with all of this"
@@ -87,3 +87,74 @@ msgstr "Попробовать снова"
 msgid "Continue"
 msgstr "Продолжить"
 
+msgid "Layouts:"
+msgstr "Раскладки:"
+
+msgid "Text will look like this"
+msgstr "Текст будет выглядеть примерно так"
+
+msgid "Restore default"
+msgstr "Сбросить"
+
+msgid "Authors"
+msgstr "Авторы"
+
+msgid "Third-party libraries"
+msgstr "Используемые библиотеки"
+
+msgid "Additional info"
+msgstr "Дополнительаня информация"
+
+msgid "Show device info"
+msgstr "Об устройстве"
+
+msgid "Show build info"
+msgstr "О сборке"
+
+msgid "Main developer"
+msgstr "Основной разработчик"
+
+msgid "Icon designer"
+msgstr "Автор логотипа"
+
+msgid "Ask your question here"
+msgstr "Задайте свой вопрос"
+
+msgid "Or scroll down to view previous dialogs"
+msgstr "Или прокрутите вниз для просмотра предыдущих диалогов"
+
+msgid "No internet connection.\nScroll down to view previous dialogs."
+msgstr "Нет подключения к интернету.\nПрокрутите вниз для просмотра предыдущих диалогов"
+
+msgid "Preparing..."
+msgstr "Подготовка..."
+
+msgid "Unknown error:"
+msgstr "Неизвестная ошибка:"
+
+msgid "Too long record. Hint: use Send button when you finish your prompt."
+msgstr "Слишком долго. Подсказка: нажпите Отправить после диктовки запроса."
+
+msgid "Listening..."
+msgstr "Слушаю..."
+
+msgid "Min firmware version: "
+msgstr "Минимальная версия: "
+
+msgid "Daily usage limit reached"
+msgstr "Достигнут дневной лимит"
+
+msgid "Voice input for this device isn't supported now"
+msgstr "Голосовой ввод на этом устройстве пока что не поддерживатеся"
+
+msgid "Update device firmware to use this feature"
+msgstr "Обновите прошивку устройства, чтобы использовать эту функцию"
+
+msgid "Voice requests:"
+msgstr "Голосовой ввод:"
+
+msgid "Messages (total):"
+msgstr "Сообщений (общий):"
+
+msgid "Daily limits:"
+msgstr "Суточный лимит:"
