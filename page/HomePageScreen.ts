@@ -7,21 +7,12 @@ import {AiChatTheme} from "./shared/AiChatTheme";
 import {ConfigStorage} from "mzfw/device/Path";
 import {ChatListRecord} from "./types/ConfigStorageTypes";
 import {TextComponent} from "mzfw/device/UiTextComponent";
-import {
-  IS_BAND_7,
-  IS_SMALL_SCREEN_DEVICE,
-  SCREEN_HEIGHT,
-  SCREEN_MARGIN,
-  SCREEN_WIDTH,
-  WIDGET_WIDTH
-} from "mzfw/device/UiProperties";
+import {IS_BAND_7, IS_SMALL_SCREEN_DEVICE, SCREEN_HEIGHT, SCREEN_MARGIN, WIDGET_WIDTH} from "mzfw/device/UiProperties";
 import {createImeSelectBar} from "./shared/createImeSelectBar";
-import {align} from "mzfw/zosx/ui";
+import {align, redraw} from "mzfw/zosx/ui";
 import {ImageComponent} from "mzfw/device/UiNativeComponents/UiImageComponent";
 import {ServerNewsEntry} from "./types/ServerResponse";
 import {rmSync} from "mzfw/zosx/fs";
-import {TextLayoutProvider} from "mzfw/device/System/TextLayoutProvider";
-import {UiDrawRectangleComponent} from "mzfw/device/UiNativeComponents";
 
 type HomePageParams = {
   isOnline: boolean,
@@ -49,10 +40,8 @@ class HomePageScreen extends ListView<HomePageParams> {
 
     // Sizes
     const margin = IS_SMALL_SCREEN_DEVICE ? 16 : 24;
-    const infoTextSize = this.theme.FONT_SIZE - (IS_BAND_7 ? 4 : 8);
-    const titleTextSize = this.theme.FONT_SIZE;
-    const infoHeight = TextLayoutProvider.getHeightOf(infoText, SCREEN_WIDTH, infoTextSize);
-    const titleHeight = TextLayoutProvider.getHeightOf(titleText, SCREEN_WIDTH, titleTextSize);
+    const titleTextSize = Math.min(this.theme.FONT_SIZE, 34);
+    const infoTextSize = titleTextSize - (IS_BAND_7 ? 4 : 8);
 
     // Headline settings button
     const headlineHeight = this.configureHeadComponent(new HeadlineButton({
@@ -74,7 +63,7 @@ class HomePageScreen extends ListView<HomePageParams> {
     this.configureHeadComponent(new TextComponent({
       text: titleText,
       color: 0xFFFFFF,
-      textSize: this.theme.FONT_SIZE,
+      textSize: titleTextSize,
       alignH: align.CENTER_H,
       alignV: align.BOTTOM,
     }), textBoxY, textBoxHeight - 4);
@@ -83,7 +72,7 @@ class HomePageScreen extends ListView<HomePageParams> {
     this.configureHeadComponent(new TextComponent({
       text: infoText,
       color: 0xAAAAAA,
-      textSize: this.theme.FONT_SIZE - (IS_BAND_7 ? 4 : 8),
+      textSize: infoTextSize,
       alignH: align.CENTER_H,
       alignV: align.TOP,
     }), textBoxY + textBoxHeight + 4, textBoxHeight)
