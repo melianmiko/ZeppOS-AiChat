@@ -16,12 +16,15 @@ import {saveNewMessageToFile} from "./shared/saveNewMessageToFile";
 import {replace} from "mzfw/zosx/router";
 import {align} from "mzfw/zosx/ui";
 import {getSystemInfo} from "mzfw/zosx/settings";
-import TimeoutID = setTimeout.TimeoutID;
 import {resetPageBrightTime, setPageBrightTime} from "mzfw/zosx/display";
+import TimeoutID = setTimeout.TimeoutID;
+import { AiChatTheme } from "./shared/AiChatTheme";
 
 const media = osImport<ZeppMediaLibrary>("@zos/media", null);
 
 class InputVoiceScreen extends ListView<IMEProps> {
+  public theme = new AiChatTheme();
+
   private recorder: ZeppMediaRecorder | null = null;
   private recorderTimeout: TimeoutID | null = null;
 
@@ -30,22 +33,18 @@ class InputVoiceScreen extends ListView<IMEProps> {
     alignH: align.CENTER_H,
     marginV: 16,
   });
-  private finishButton = new Button({
-    text: "Send",
-    variant: ButtonVariant.DEFAULT,
-    onClick: () => this.stopRecording(),
-  })
+  private viewIcon: ImageComponent = new ImageComponent({
+    src: "icon/60/preparing.png",
+    imageWidth: 60,
+    imageHeight: 60,
+  });
 
   /**
    * Shows icon in top of page
    * @protected
    */
   protected buildHeader(): Component<any> | null {
-    return new ImageComponent({
-      src: "icon/48/voice.png",
-      imageWidth: 48,
-      imageHeight: 48,
-    });
+    return this.viewIcon;
   }
 
   /**
@@ -56,7 +55,6 @@ class InputVoiceScreen extends ListView<IMEProps> {
     setPageBrightTime({brightTime: 60000});
     return [
       this.viewText,
-      this.finishButton,
     ]
   }
 
@@ -87,7 +85,7 @@ class InputVoiceScreen extends ListView<IMEProps> {
     }).then((d: ServerVoicePrepareResponse) => {
       if(!d) return;
       if (!d.result) {
-        this.viewError(d.error);
+        this.updateView(t(d.error));
         if(d.requiredFirmware)
           this.viewMinFirmware(d.requiredFirmware);
         return;
@@ -96,8 +94,8 @@ class InputVoiceScreen extends ListView<IMEProps> {
       this.startRecording();
     }).catch((e) => {
       console.log(e);
-      this.viewError(t("Unknown error:") + e.toString());
-    })
+      this.updateView(t("Unknown error:") + e.toString());
+    });
   }
 
   /**
@@ -115,13 +113,26 @@ class InputVoiceScreen extends ListView<IMEProps> {
     this.recorder.setFormat(media.codec.OPUS, {target_file: "voice.opus"});
     this.recorder.start();
 
-    // Update UI
-    this.viewText.updateProps({text: t("Listening...")})
-    this.recorderTimeout = setTimeout(() => {
+    // Max record time limit
+    const timeout = setTimeout(() => {
       // Max recording time
-      this.viewText.updateProps({text: t("Too long record. Hint: use Stop button when you finish your prompt.")})
-      this.removeComponent(this.finishButton);
+      this.updateView(t("Too long record. Hint: use Send button when you finish your prompt."), "timeout");
+      this.removeComponent(button);
     }, 15000);
+
+    // Update UI
+    this.updateView(t("Listening..."), "recording");
+
+    const button = new Button({
+      text: t("Send"),
+      variant: ButtonVariant.PRIMARY,
+      onClick: () => {
+        this.removeComponent(button);
+        clearTimeout(timeout);
+        this.stopRecording();
+      }
+    });
+    this.addComponent(button);
   }
 
   private stopRecording() {
@@ -131,9 +142,6 @@ class InputVoiceScreen extends ListView<IMEProps> {
     this.recorder.stop();
     clearTimeout(this.recorderTimeout);
     this.recorder = null;
-
-    // Update UI
-    this.removeComponent(this.finishButton);
 
     // Continue
     this.sendRequest();
@@ -146,14 +154,14 @@ class InputVoiceScreen extends ListView<IMEProps> {
   private sendRequest() {
     const stat = statSync({path: "voice.opus"});
     if(!stat || stat.size == 0)
-      return this.viewText.updateProps({text: t("Failed: file not found")})
+      return this.updateView(t("Failed: file not found"));
 
     const fd = openSync({path: "voice.opus", flag: O_RDONLY});
     const buffer = Buffer.alloc(stat.size);
     readSync({fd, buffer: buffer.buffer});
     closeSync(fd);
 
-    this.viewText.updateProps({text: t("Processing...")});
+    this.updateView(t("Processing..."), "loading");
 
     let status: number;
     fetch(`${SERVER_BASE_URL}/api/v2/chat`, {
@@ -192,12 +200,12 @@ class InputVoiceScreen extends ListView<IMEProps> {
     if (status === 429) message = "Too many requests";
     else if (data && data.error) message = data.error;
 
-    this.viewError(message);
+    this.updateView(message);
   }
 
   private viewMinFirmware(minFirmware: string) {
     this.addComponent(new TextComponent({
-      text: t("Minimal firmware version: ") + minFirmware,
+      text: t("Min firmware version: ") + minFirmware + ".x.x",
       textSize: this.theme.FONT_SIZE - 4,
       color: 0xAAAAAA,
       alignH: align.CENTER_H,
@@ -205,13 +213,9 @@ class InputVoiceScreen extends ListView<IMEProps> {
     }))
   }
 
-  private viewError(message: string, icon: string = "error") {
+  private updateView(message: string, icon: string = "warning") {
     this.viewText.updateProps({text: message});
-    if(this.finishButton) {
-      this.removeComponent(this.finishButton);
-      this.finishButton = null;
-    }
-    // TODO: Error icon
+    this.viewIcon.updateProps({src: `icon/60/${icon}.png`})
   }
 }
 

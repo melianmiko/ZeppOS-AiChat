@@ -45,6 +45,7 @@ class SettingsScreen extends ListView<any> {
 
     const limitNames = {
       "total": t("Messages (total):"),
+      "voice": t("Voice requests:")
     }
 
     return fetch(`${SERVER_BASE_URL}/api/v2/my_limits`, {headers: getRequestHeaders()}).then((r) => {

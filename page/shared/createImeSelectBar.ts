@@ -1,8 +1,19 @@
-import {ActionBar} from "mzfw/device/UiActionBar";
+import {ActionBar, ActionBarItem} from "mzfw/device/UiActionBar";
 import {push, replace} from "mzfw/zosx/router";
+import {zeppFeatureLevel} from "mzfw/device/System";
 
 export function createImeSelectBar(id: string, useReplace: boolean = true): ActionBar {
   const handler = useReplace ? replace : push;
+
+  const items: ActionBarItem[] = [{
+      icon: "keyboard",
+      onClick: () => continueToIME("page/InputKeyboardScreen"),
+  }];
+
+  if(zeppFeatureLevel >= 3) items.push({
+    icon: "voice",
+    onClick: () => continueToIME("page/InputVoiceScreen"),
+  });
 
   function continueToIME(url: string) {
     handler({
@@ -12,15 +23,6 @@ export function createImeSelectBar(id: string, useReplace: boolean = true): Acti
   }
 
   return new ActionBar({
-    children: [
-      {
-        icon: "keyboard",
-        onClick: () => continueToIME("page/InputKeyboardScreen"),
-      },
-      {
-        icon: "voice",
-        onClick: () => continueToIME("page/InputVoiceScreen"),
-      },
-    ]
+    children: items,
   });
 }

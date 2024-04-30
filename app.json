@@ -47,10 +47,11 @@
                         "page/SettingsScreen",
                         "page/SettingsKeyboardScreen",
                         "page/SettingsFontSizeScreen",
-                        "page/AboutScreen"
+                        "page/AboutScreen",
+                        "page/DonateScreen"
                     ]
                 },
-                "secondary-widget": {
+                "//secondary-widget": {
                     "widgets": [
                         {
                             "path": "secondary-widget/index",

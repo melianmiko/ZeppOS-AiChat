@@ -94,10 +94,40 @@ msgstr ""
 msgid "Icon designer"
 msgstr ""
 
-msgid "Ask your question here, or scroll down to view previous dialogs"
+msgid "Ask your question here"
+msgstr ""
+
+msgid "Or scroll down to view previous dialogs"
 msgstr ""
 
 msgid "No internet connection.\nScroll down to view previous dialogs."
+msgstr ""
+
+msgid "Preparing..."
+msgstr ""
+
+msgid "Unknown error:"
+msgstr ""
+
+msgid "Too long record. Hint: use Send button when you finish your prompt."
+msgstr ""
+
+msgid "Listening..."
+msgstr ""
+
+msgid "Min firmware version: "
+msgstr ""
+
+msgid "Daily usage limit reached"
+msgstr ""
+
+msgid "Voice input for this device isn't supported now"
+msgstr ""
+
+msgid "Update device firmware to use this feature"
+msgstr ""
+
+msgid "Voice requests:"
 msgstr ""
 
 msgid "Messages (total):"

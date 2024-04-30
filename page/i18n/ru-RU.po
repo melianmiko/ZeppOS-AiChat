@@ -94,7 +94,7 @@ msgid "Text will look like this"
 msgstr "Текст будет выглядеть примерно так"
 
 msgid "Restore default"
-msgstr "Вернуть стандартное"
+msgstr "Сбросить"
 
 msgid "Authors"
 msgstr "Авторы"
@@ -117,14 +117,41 @@ msgstr "Основной разработчик"
 msgid "Icon designer"
 msgstr "Автор логотипа"
 
-msgid "Ask your question here, or scroll down to view previous dialogs"
-msgstr "Задайте свой вопрос, или прокрутите вниз для просмотра предыдущих диалогов"
+msgid "Ask your question here"
+msgstr "Задайте свой вопрос"
 
-msgid "Ask your question here to start new AI Chat dialog"
-msgstr "Задайте свой вопрос, чтобы начать новый диалог в AI Chat"
+msgid "Or scroll down to view previous dialogs"
+msgstr "Или прокрутите вниз для просмотра предыдущих диалогов"
 
 msgid "No internet connection.\nScroll down to view previous dialogs."
 msgstr "Нет подключения к интернету.\nПрокрутите вниз для просмотра предыдущих диалогов"
+
+msgid "Preparing..."
+msgstr "Подготовка..."
+
+msgid "Unknown error:"
+msgstr "Неизвестная ошибка:"
+
+msgid "Too long record. Hint: use Send button when you finish your prompt."
+msgstr "Слишком долго. Подсказка: нажпите Отправить после диктовки запроса."
+
+msgid "Listening..."
+msgstr "Слушаю..."
+
+msgid "Min firmware version: "
+msgstr "Минимальная версия: "
+
+msgid "Daily usage limit reached"
+msgstr "Достигнут дневной лимит"
+
+msgid "Voice input for this device isn't supported now"
+msgstr "Голосовой ввод на этом устройстве пока что не поддерживатеся"
+
+msgid "Update device firmware to use this feature"
+msgstr "Обновите прошивку устройства, чтобы использовать эту функцию"
+
+msgid "Voice requests:"
+msgstr "Голосовой ввод:"
 
 msgid "Messages (total):"
 msgstr "Сообщений (общий):"

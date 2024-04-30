@@ -7,6 +7,7 @@ import {
 import {BASE_FONT_SIZE} from "mzfw/device/UiProperties";
 import {launchApp} from "mzfw/zosx/router";
 import {getAppTags} from "mzfw/shared/AppTagsProvider";
+import {zeppFeatureLevel} from "mzfw/device/System";
 
 AppWidget({
   build() {
@@ -51,7 +52,7 @@ AppWidget({
       url: "page/InputKeyboardScreen",
       params: JSON.stringify({id: "0", text: ""}),
     }));
-    simpleIconButton(1, "voice", () => launchApp({
+    if(zeppFeatureLevel >= 3) simpleIconButton(1, "voice", () => launchApp({
       appId: getAppTags()[0],
       url: "page/InputVoiceScreen",
       params: JSON.stringify({id: "0", text: ""}),

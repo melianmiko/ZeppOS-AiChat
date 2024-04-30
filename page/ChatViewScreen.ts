@@ -10,13 +10,16 @@ import {ActionBar} from "mzfw/device/UiActionBar";
 import {replace} from "mzfw/zosx/router";
 import {getText as t} from "mzfw/zosx/i18n";
 import {resetPageBrightTime, setPageBrightTime} from "mzfw/zosx/display";
+import { AiChatTheme } from "./shared/AiChatTheme";
 
 type ChatViewScreenProps = {
   id: string
 }
 
 class ChatViewScreen extends ListView<ChatViewScreenProps> {
+  public theme = new AiChatTheme();
   public renderDirection: 1 | -1 = -1;
+
   private storage?: ConfigStorage;
   private messages: ChatMessageRecord[] = [];
   private lastMessage?: TextComponent;

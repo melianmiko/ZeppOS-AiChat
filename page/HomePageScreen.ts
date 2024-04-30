@@ -7,12 +7,21 @@ import {AiChatTheme} from "./shared/AiChatTheme";
 import {ConfigStorage} from "mzfw/device/Path";
 import {ChatListRecord} from "./types/ConfigStorageTypes";
 import {TextComponent} from "mzfw/device/UiTextComponent";
-import {IS_BAND_7, IS_SMALL_SCREEN_DEVICE, SCREEN_HEIGHT, SCREEN_MARGIN, WIDGET_WIDTH} from "mzfw/device/UiProperties";
+import {
+  IS_BAND_7,
+  IS_SMALL_SCREEN_DEVICE,
+  SCREEN_HEIGHT,
+  SCREEN_MARGIN,
+  SCREEN_WIDTH,
+  WIDGET_WIDTH
+} from "mzfw/device/UiProperties";
 import {createImeSelectBar} from "./shared/createImeSelectBar";
 import {align} from "mzfw/zosx/ui";
 import {ImageComponent} from "mzfw/device/UiNativeComponents/UiImageComponent";
 import {ServerNewsEntry} from "./types/ServerResponse";
 import {rmSync} from "mzfw/zosx/fs";
+import {TextLayoutProvider} from "mzfw/device/System/TextLayoutProvider";
+import {UiDrawRectangleComponent} from "mzfw/device/UiNativeComponents";
 
 type HomePageParams = {
   isOnline: boolean,
@@ -33,7 +42,17 @@ class HomePageScreen extends ListView<HomePageParams> {
   protected beforeListViewRender() {
     if(!this.props.isOnline)
       return this.showOfflinePage();
+
+    // Text
+    const titleText = t("Ask your question here");
+    const infoText = t("Or scroll down to view previous dialogs");
+
+    // Sizes
     const margin = IS_SMALL_SCREEN_DEVICE ? 16 : 24;
+    const infoTextSize = this.theme.FONT_SIZE - (IS_BAND_7 ? 4 : 8);
+    const titleTextSize = this.theme.FONT_SIZE;
+    const infoHeight = TextLayoutProvider.getHeightOf(infoText, SCREEN_WIDTH, infoTextSize);
+    const titleHeight = TextLayoutProvider.getHeightOf(titleText, SCREEN_WIDTH, titleTextSize);
 
     // Headline settings button
     const headlineHeight = this.configureHeadComponent(new HeadlineButton({
@@ -47,14 +66,27 @@ class HomePageScreen extends ListView<HomePageParams> {
     // IME Select bar
     const imeBarHeight = this.configureHeadComponent(createImeSelectBar("0", false), -margin);
 
-    // Info text
+    // Calculate y for text's
+    const textBoxY = headlineHeight + margin;
+    const textBoxHeight = Math.floor((SCREEN_HEIGHT - textBoxY - imeBarHeight - margin) / 2);
+
+    // Main title
     this.configureHeadComponent(new TextComponent({
-      text: t("Ask your question here, or scroll down to view previous dialogs"),
-      color: this.theme.ACCENT_COLOR_LIGHT,
-      textSize: this.theme.FONT_SIZE - (IS_BAND_7 ? 2 : 6),
+      text: titleText,
+      color: 0xFFFFFF,
+      textSize: this.theme.FONT_SIZE,
       alignH: align.CENTER_H,
       alignV: align.BOTTOM,
-    }), headlineHeight + (margin * 2), SCREEN_HEIGHT - headlineHeight - imeBarHeight - (margin * 4))
+    }), textBoxY, textBoxHeight - 4);
+
+    // Info text
+    this.configureHeadComponent(new TextComponent({
+      text: infoText,
+      color: 0xAAAAAA,
+      textSize: this.theme.FONT_SIZE - (IS_BAND_7 ? 4 : 8),
+      alignH: align.CENTER_H,
+      alignV: align.TOP,
+    }), textBoxY + textBoxHeight + 4, textBoxHeight)
   }
 
   /**

@@ -12,7 +12,7 @@ App({
     initFetchProvider(10000);
 
     // Force bring side-service up
-    sendRequestMessage({action: "ping"}).then(() => {});
+    // sendRequestMessage({action: "ping"}).then(() => {});
   },
 
   onDestroy() {
