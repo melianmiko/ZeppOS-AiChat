@@ -1,5 +1,5 @@
 import {IS_BAND_7, SCREEN_HEIGHT, SCREEN_WIDTH} from "mzfw/device/UiProperties";
-import {createWidget, widget} from "mzfw/zosx/ui";
+import {createWidget, setStatusBarVisible, widget} from "mzfw/zosx/ui";
 import {ZeppFillRectWidgetOptions, ZeppImgWidgetOptions} from "mzfw/zosx/ui/WidgetOptionTypes";
 import {
   getAutoBrightness,
@@ -40,11 +40,13 @@ Page({
 
     userSettings.autoBrightness = getAutoBrightness();
     userSettings.brightness = getBrightness();
+    setStatusBarVisible(false);
     setBrightness({brightness: 100});
     setAutoBrightness({autoBright: false});
     setPageBrightTime({brightTime: 60 * 1000});
   },
   onDestroy() {
+    setStatusBarVisible(true);
     setBrightness({brightness: userSettings.brightness});
     setAutoBrightness({autoBright: userSettings.autoBrightness});
     resetPageBrightTime();
