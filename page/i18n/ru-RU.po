@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2024-04-05 05:21\n"
+"PO-Revision-Date: 2024-04-30 08:40\n"
 
 msgid "About..."
 msgstr "О программе..."
@@ -27,17 +27,11 @@ msgstr "Поддержать"
 msgid "Stop due to length limit..."
 msgstr "Остановка, превышен лимит длинны текста..."
 
-msgid "Message..."
-msgstr "Сообщение..."
-
 msgid "This dialog closed due to timeout."
 msgstr "Этот диалог закрыт, истекло время хранения."
 
 msgid "Settings..."
 msgstr "Настройки..."
-
-msgid "New chat..."
-msgstr "Новый диалог..."
 
 msgid "Keyboard..."
 msgstr "Клавиатура..."
@@ -81,9 +75,6 @@ msgstr "Также, имейте в виду, что ChatGPT не являетс
 msgid "Continue only of you agree with all of this"
 msgstr "Продолжайте только если вы согласны с написанным выше"
 
-msgid "Try again"
-msgstr "Попробовать снова"
-
 msgid "Continue"
 msgstr "Продолжить"
 
@@ -123,8 +114,10 @@ msgstr "Задайте свой вопрос"
 msgid "Or scroll down to view previous dialogs"
 msgstr "Или прокрутите вниз для просмотра предыдущих диалогов"
 
-msgid "No internet connection.\nScroll down to view previous dialogs."
-msgstr "Нет подключения к интернету.\nПрокрутите вниз для просмотра предыдущих диалогов"
+msgid "No internet connection.\n"
+"Scroll down to view previous dialogs."
+msgstr "Нет подключения к интернету.\n"
+"Прокрутите вниз для просмотра предыдущих диалогов"
 
 msgid "Preparing..."
 msgstr "Подготовка..."
@@ -158,3 +151,4 @@ msgstr "Сообщений (общий):"
 
 msgid "Daily limits:"
 msgstr "Суточный лимит:"
+
