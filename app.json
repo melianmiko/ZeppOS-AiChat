@@ -6,7 +6,7 @@
         "appType": "app",
         "version": {
             "code": 1,
-            "name": "2.0.0"
+            "name": "2.1.0"
         },
         "icon": "icon.png",
         "vender": "zepp",
