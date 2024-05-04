@@ -1,11 +1,11 @@
-import {align, createWidget, getAppWidgetSize, setAppWidgetSize, text_style, widget} from "mzfw/zosx/ui";
+import {align, createWidget, getAppWidgetSize, setAppWidgetSize, text_style, widget} from "@zosx/ui";
 import {
   ZeppButtonWidgetOptions,
   ZeppFillRectWidgetOptions,
   ZeppTextWidgetOptions
-} from "mzfw/zosx/ui/WidgetOptionTypes";
+} from "@zosx/types";
 import {BASE_FONT_SIZE} from "mzfw/device/UiProperties";
-import {launchApp} from "mzfw/zosx/router";
+import {launchApp} from "@zosx/router";
 import {getAppTags} from "mzfw/shared/AppTagsProvider";
 import {zeppFeatureLevel} from "mzfw/device/System";
 

@@ -1,10 +1,10 @@
 import {Component} from "mzfw/device/UiComponent";
 import {BaseCompositor} from "mzfw/device/UiCompositor";
 import {IS_BAND_7, IS_SMALL_SCREEN_DEVICE, SCREEN_HEIGHT, SCREEN_MARGIN, WIDGET_WIDTH} from "mzfw/device/UiProperties";
-import {getText as t} from "mzfw/zosx/i18n";
+import {getText as t} from "@zosx/i18n";
 import {createImeSelectBar} from "../page/shared/createImeSelectBar";
 import {TextComponent} from "mzfw/device/UiTextComponent";
-import {align} from "mzfw/zosx/ui";
+import {align} from "@zosx/ui";
 import { AiChatTheme } from "../page/shared/AiChatTheme";
 
 class AiChatWidget extends BaseCompositor<{}> {

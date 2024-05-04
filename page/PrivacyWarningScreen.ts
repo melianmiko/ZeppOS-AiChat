@@ -1,10 +1,10 @@
 import {ListView} from "mzfw/device/UiListView";
 import {Component} from "mzfw/device/UiComponent";
 import {TextComponent} from "mzfw/device/UiTextComponent";
-import {getText as t} from "mzfw/zosx/i18n";
+import {getText as t} from "@zosx/i18n";
 import {AiChatTheme} from "./shared/AiChatTheme";
 import {Button, ButtonVariant} from "mzfw/device/UiButton";
-import {replace} from "mzfw/zosx/router";
+import {replace} from "@zosx/router";
 import type {ConfigStorage} from "mzfw/device/Path";
 import {IMEProps} from "./types/CommonPagePropTypes";
 

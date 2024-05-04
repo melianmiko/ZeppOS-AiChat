@@ -5,11 +5,11 @@ import {createImeSelectBar} from "./shared/createImeSelectBar";
 import {ChatMessageRecord} from "./types/ConfigStorageTypes";
 import {ConfigStorage} from "mzfw/device/Path";
 import {SERVER_BASE_URL} from "./shared/constants";
-import {align} from "mzfw/zosx/ui";
+import {align} from "@zosx/ui";
 import {ActionBar} from "mzfw/device/UiActionBar";
-import {replace} from "mzfw/zosx/router";
-import {getText as t} from "mzfw/zosx/i18n";
-import {resetPageBrightTime, setPageBrightTime} from "mzfw/zosx/display";
+import {replace} from "@zosx/router";
+import {getText as t} from "@zosx/i18n";
+import {resetPageBrightTime, setPageBrightTime} from "@zosx/display";
 import { AiChatTheme } from "./shared/AiChatTheme";
 
 type ChatViewScreenProps = {

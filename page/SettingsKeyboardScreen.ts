@@ -1,6 +1,6 @@
 import {ScreenBoardConfigScreen} from "mzfw/device/ScreenBoardConfigScreen";
 import {AiChatTheme} from "./shared/AiChatTheme";
-import {getText} from "mzfw/zosx/i18n";
+import {getText} from "@zosx/i18n";
 
 class SettingsKeyboardScreen extends ScreenBoardConfigScreen {
   public theme = new AiChatTheme();

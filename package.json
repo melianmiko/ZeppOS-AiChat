@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "main": "app.js",
+    "module": true,
     "scripts": {
         "build": "zeusx build",
         "dev": "zeusx dev",
@@ -13,10 +14,7 @@
     "license": "ISC",
     "devDependencies": {
         "@zeppos/device-types": "^3.0.0",
-        "zeppos-device-types-v1": "^1.0.9",
-        "zeusx": ">=0.2.0"
-    },
-    "dependencies": {
-        "mzfw": "file:../mzfw/package/mzfw-1.0.0.tgz"
+        "mzfw": "file:../mzfw/packages/mzfw/mzfw-0.2.0.tgz",
+        "zosx": "^0.2.4"
     }
 }

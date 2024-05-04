@@ -1,13 +1,13 @@
 import {ListItem, ListView, SectionHeaderComponent} from "mzfw/device/UiListView";
 import {Component} from "mzfw/device/UiComponent";
-import {getText as t} from "mzfw/zosx/i18n";
-import {push} from "mzfw/zosx/router";
+import {getText as t} from "@zosx/i18n";
+import {push} from "@zosx/router";
 import {AiChatTheme} from "./shared/AiChatTheme";
 import {SERVER_BASE_URL} from "./shared/constants";
 import {getRequestHeaders} from "./shared/Tools";
 import {ServerLimitsResponse} from "./types/ServerResponse";
 import {TextComponent} from "mzfw/device/UiTextComponent";
-import {align} from "mzfw/zosx/ui";
+import {align} from "@zosx/ui";
 
 class SettingsScreen extends ListView<any> {
   public theme = new AiChatTheme();

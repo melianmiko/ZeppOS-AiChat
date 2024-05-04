@@ -1,6 +1,6 @@
 import {IS_BAND_7, SCREEN_HEIGHT, SCREEN_WIDTH} from "mzfw/device/UiProperties";
-import {createWidget, setStatusBarVisible, widget} from "mzfw/zosx/ui";
-import {ZeppFillRectWidgetOptions, ZeppImgWidgetOptions} from "mzfw/zosx/ui/WidgetOptionTypes";
+import {createWidget, setStatusBarVisible, widget} from "@zosx/ui";
+import {ZeppFillRectWidgetOptions, ZeppImgWidgetOptions} from "@zosx/types";
 import {
   getAutoBrightness,
   getBrightness,
@@ -8,7 +8,7 @@ import {
   setAutoBrightness,
   setBrightness,
   setPageBrightTime
-} from "mzfw/zosx/display";
+} from "@zosx/display";
 
 type SavedUserSettings = {
   brightness: number,

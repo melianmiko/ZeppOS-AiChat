@@ -1,6 +1,5 @@
 import {DeviceInfo} from "mzfw/device/UiProperties";
 import {SERVER_AUTH_KEY} from "./constants";
-import {requestPermission} from "mzfw/zosx/app";
 
 export type DeviceInfoBundle = {
   id: string,

@@ -2,7 +2,7 @@ import {TemplateSplashScreen} from "mzfw/device/TemplateSplashScreen";
 import {SERVER_BASE_URL} from "./shared/constants";
 import {getRequestHeaders} from "./shared/Tools";
 import {ServerInitResponse} from "./types/ServerResponse";
-import {getText as t} from "mzfw/zosx/i18n";
+import {getText as t} from "@zosx/i18n";
 
 class SplashScreen extends TemplateSplashScreen {
     protected continueToUrl: string = "page/HomePageScreen";

@@ -1,6 +1,6 @@
 import {TemplateFontSettings} from "mzfw/device/TemplateFontSettings";
 import {AiChatTheme} from "./shared/AiChatTheme";
-import {getText} from "mzfw/zosx/i18n";
+import {getText} from "@zosx/i18n";
 
 class SettingsFontSizeScreen extends TemplateFontSettings {
   public theme = new AiChatTheme(false);

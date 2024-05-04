@@ -1,5 +1,5 @@
 import {ActionBar, ActionBarItem} from "mzfw/device/UiActionBar";
-import {push, replace} from "mzfw/zosx/router";
+import {push, replace} from "@zosx/router";
 import {zeppFeatureLevel} from "mzfw/device/System";
 
 export function createImeSelectBar(id: string, useReplace: boolean = true): ActionBar {

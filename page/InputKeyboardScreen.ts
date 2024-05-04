@@ -1,14 +1,14 @@
 import {IMEProps} from "./types/CommonPagePropTypes";
 import {ScreenBoard} from "mzfw/device/ScreenBoard";
 import {AiChatTheme} from "./shared/AiChatTheme";
-import {getText as t} from "mzfw/zosx/i18n";
+import {getText as t} from "@zosx/i18n";
 import {ListView} from "mzfw/device/UiListView";
 import {Component} from "mzfw/device/UiComponent";
 import {SERVER_AUTH_KEY, SERVER_BASE_URL} from "./shared/constants";
 import {getTbaToken, getSharedDeviceData, getRequestHeaders} from "./shared/Tools";
 import {saveNewMessageToFile} from "./shared/saveNewMessageToFile";
-import {replace} from "mzfw/zosx/router";
-import {showToast} from "mzfw/zosx/interaction";
+import {replace} from "@zosx/router";
+import {showToast} from "@zosx/interaction";
 import {ServerChatResponse} from "./types/ServerResponse";
 
 class InputKeyboardScreen extends ListView<IMEProps> {

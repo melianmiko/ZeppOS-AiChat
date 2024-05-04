@@ -1,18 +1,18 @@
 import {ListItem, ListView, SectionHeaderComponent} from "mzfw/device/UiListView";
 import {Component} from "mzfw/device/UiComponent";
 import {HeadlineButton} from "mzfw/device/UiButton";
-import {getText as t} from "mzfw/zosx/i18n";
-import {push, replace} from "mzfw/zosx/router";
+import {getText as t} from "@zosx/i18n";
+import {push, replace} from "@zosx/router";
 import {AiChatTheme} from "./shared/AiChatTheme";
 import {ConfigStorage} from "mzfw/device/Path";
 import {ChatListRecord} from "./types/ConfigStorageTypes";
 import {TextComponent} from "mzfw/device/UiTextComponent";
 import {IS_BAND_7, IS_SMALL_SCREEN_DEVICE, SCREEN_HEIGHT, SCREEN_MARGIN, WIDGET_WIDTH} from "mzfw/device/UiProperties";
 import {createImeSelectBar} from "./shared/createImeSelectBar";
-import {align, redraw} from "mzfw/zosx/ui";
+import {align, redraw} from "@zosx/ui";
 import {ImageComponent} from "mzfw/device/UiNativeComponents/UiImageComponent";
 import {ServerNewsEntry} from "./types/ServerResponse";
-import {rmSync} from "mzfw/zosx/fs";
+import {rmSync} from "@zosx/fs";
 
 type HomePageParams = {
   isOnline: boolean,
