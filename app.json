@@ -32,7 +32,8 @@
             "designWidth": 480,
             "platforms": [
                 "balance",
-                "gtr4"
+                "gtr4",
+                "gtr4le"
             ],
             "module": {
                 "page": {
@@ -92,7 +93,6 @@
                 "cheetah_pro",
                 "cheetah_square",
                 "gtr_mini",
-                "gtr4le",
                 "gts4",
                 "gts4mini",
                 "falcon",

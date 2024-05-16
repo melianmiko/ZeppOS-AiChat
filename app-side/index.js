@@ -4,12 +4,9 @@ import {initFetchProvider} from "mzfw/shared/SideFetchProvider";
 
 AppSideService({
   onInit() {
-    console.log(111);
     defineAppTags("app", 1029480);
     initMessaging();
-    console.log(222);
     initFetchProvider();
-    console.log(333);
   },
 
   onDestroy() {
