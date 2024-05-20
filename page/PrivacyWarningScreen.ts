@@ -20,14 +20,14 @@ class PrivacyWarningScreen extends ListView<IMEProps & {continueUrl: string}> {
         marginV: 6,
       }),
       new TextComponent({
-        text: t("All data that you provide to this application will be sent to OpenAI to proceed with GPT-3 AI model. " +
-          "Keep in mind that all conversions may be used by OpenAI team to train next generations of ChatGPT. Do not share " +
-          "any personal or secret information with ChatGPT."),
+        text: t("All data that you provide to this application will be sent to Google to proceed with Gemini 1.5 AI model. " +
+          "Keep in mind that all conversions may be used by Google team to train next generations of Gemini. Do not share " +
+          "any personal or secret information with Gemini."),
         marginV: 4,
       }),
       new TextComponent({
-        text: t("Also, keep in mind that ChatGPT isn't totally perfect, and it can generate incorrect information, " +
-          "may produce offensive or biased content. Developer of \"AI-Chat\" only provide access to ChatGPT, and didn't " +
+        text: t("Also, keep in mind that Gemini isn't totally perfect, and it can generate incorrect information, " +
+          "may produce offensive or biased content. Developer of \"AI-Chat\" only provide access to Gemini, and didn't " +
           "responsible for any content that is generated with this tool."),
         marginV: 4,
       }),
