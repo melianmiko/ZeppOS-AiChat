@@ -1,16 +1,19 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
-"X-Crowdin-Project: zeppchat\n"
-"X-Crowdin-Project-ID: 611699\n"
-"X-Crowdin-Language: pl\n"
-"X-Crowdin-File: en-US.po\n"
-"X-Crowdin-File-ID: 67\n"
-"Project-Id-Version: zeppchat\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-16 12:15+0000\n"
+"PO-Revision-Date: 2024-05-20 14:53+0000\n"
+"Last-Translator: MelianMiko <melianmiko@gmail.com>\n"
+"Language-Team: Polish <http://weblate.mmk.pw/projects/ai-chat/application/pl/"
+">\n"
+"Language: pl-PL\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Language-Team: Polish\n"
-"Language: pl_PL\n"
-"PO-Revision-Date: 2024-04-05 05:12\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.5.5\n"
 
 msgid "About..."
 msgstr "O aplikacji..."
@@ -27,17 +30,11 @@ msgstr "Wspomóż mnie"
 msgid "Stop due to length limit..."
 msgstr ""
 
-msgid "Message..."
-msgstr "Wiadomość..."
-
 msgid "This dialog closed due to timeout."
 msgstr "Ten dialog został zamknięty z powodu przekroczenia czasu."
 
 msgid "Settings..."
 msgstr "Ustawienia..."
-
-msgid "New chat..."
-msgstr "Nowy chat..."
 
 msgid "Keyboard..."
 msgstr "Klawiatura..."
@@ -49,7 +46,8 @@ msgid "Swipe chat from right to left to delete."
 msgstr "Przesuń chat z prawej do lewej, aby go usunąć."
 
 msgid "There's no started chats. Use button above to start new one."
-msgstr "Nie ma rozpoczętych chatów. Użyj przycisku powyżej, aby rozpocząć nowy."
+msgstr ""
+"Nie ma rozpoczętych chatów. Użyj przycisku powyżej, aby rozpocząć nowy."
 
 msgid "New message:"
 msgstr "Nowa wiadomość:"
@@ -72,18 +70,116 @@ msgstr "Wyślij"
 msgid "Before using this app..."
 msgstr "Zanim zaczniesz używać tej aplikacji..."
 
-msgid "All data that you provide to this application will be sent to OpenAI to proceed with GPT-3 AI model. Keep in mind that all conversions may be used by OpenAI team to train next generations of ChatGPT. Do not share any personal or secret information with ChatGPT."
-msgstr "Wszystkie dane, które przekażesz tej aplikacji, zostaną wysłane do OpenAI, by kontynuować z modelem AI GPT-3. Pamiętaj, że wszystkie konwersacje mogą być użyte przez OpenAI, aby trenować nową generację ChatGPT. Nie udostępniaj żadnych danych osobistych ani sekretnych informacji z ChatGPT."
+#, fuzzy
+#| msgid ""
+#| "All data that you provide to this application will be sent to OpenAI to "
+#| "proceed with GPT-3 AI model. Keep in mind that all conversions may be "
+#| "used by OpenAI team to train next generations of ChatGPT. Do not share "
+#| "any personal or secret information with ChatGPT."
+msgid ""
+"All data that you provide to this application will be sent to Google to "
+"proceed with Gemini 1.5 AI model. Keep in mind that all conversions may be "
+"used by Google team to train next generations of Gemini. Do not share any "
+"personal or secret information with Gemini."
+msgstr ""
+"Wszystkie dane, które przekażesz tej aplikacji, zostaną wysłane do Google, "
+"by kontynuować z modelem AI Gemini 1.5. Pamiętaj, że wszystkie konwersacje "
+"mogą być użyte przez Google, aby trenować nową generację Gemini. Nie "
+"udostępniaj żadnych danych osobistych ani sekretnych informacji z Gemini."
 
-msgid "Also, keep in mind that ChatGPT isn't totally perfect, and it can generate incorrect information, may produce offensive or biased content. Developer of \"AI-Chat\" only provide access to ChatGPT, and didn't responsible for any content that is generated with this tool."
-msgstr "Pamiętaj również, że ChatGPT nie jest całkowicie doskonały i może generować nieprawidłowe informacje, może też tworzyć treści obraźliwe lub stronnicze. Twórca \"AI-Chat\" jedynie udostępnia dostęp do ChatGPT i nie ponosi odpowiedzialności za treści generowane przy użyciu tego narzędzia."
+#, fuzzy
+#| msgid ""
+#| "Also, keep in mind that ChatGPT isn't totally perfect, and it can "
+#| "generate incorrect information, may produce offensive or biased content. "
+#| "Developer of \"AI-Chat\" only provide access to ChatGPT, and didn't "
+#| "responsible for any content that is generated with this tool."
+msgid ""
+"Also, keep in mind that Gemini isn't totally perfect, and it can generate "
+"incorrect information, may produce offensive or biased content. Developer of "
+"\"AI-Chat\" only provide access to Gemini, and didn't responsible for any "
+"content that is generated with this tool."
+msgstr ""
+"Pamiętaj również, że Gemini nie jest całkowicie doskonały i może generować "
+"nieprawidłowe informacje, może też tworzyć treści obraźliwe lub stronnicze. "
+"Twórca \"AI-Chat\" jedynie udostępnia dostęp do Gemini i nie ponosi "
+"odpowiedzialności za treści generowane przy użyciu tego narzędzia."
 
 msgid "Continue only of you agree with all of this"
 msgstr "Kontynuuj tylko, jeśli zgadzasz się z tym wszystkim"
 
-msgid "Try again"
-msgstr "Spróbuj ponownie"
-
 msgid "Continue"
 msgstr ""
 
+msgid "Layouts:"
+msgstr ""
+
+msgid "Text will look like this"
+msgstr ""
+
+msgid "Restore default"
+msgstr ""
+
+msgid "Authors"
+msgstr ""
+
+msgid "Third-party libraries"
+msgstr ""
+
+msgid "Additional info"
+msgstr ""
+
+msgid "Show device info"
+msgstr ""
+
+msgid "Show build info"
+msgstr ""
+
+msgid "Main developer"
+msgstr ""
+
+msgid "Icon designer"
+msgstr ""
+
+msgid "Ask your question here"
+msgstr ""
+
+msgid "Or scroll down to view previous dialogs"
+msgstr ""
+
+msgid ""
+"No internet connection.\n"
+"Scroll down to view previous dialogs."
+msgstr ""
+
+msgid "Preparing..."
+msgstr ""
+
+msgid "Unknown error:"
+msgstr ""
+
+msgid "Too long record. Hint: use Send button when you finish your prompt."
+msgstr ""
+
+msgid "Listening..."
+msgstr ""
+
+msgid "Min firmware version: "
+msgstr ""
+
+msgid "Daily usage limit reached"
+msgstr ""
+
+msgid "Voice input for this device isn't supported now"
+msgstr ""
+
+msgid "Update device firmware to use this feature"
+msgstr ""
+
+msgid "Voice requests:"
+msgstr ""
+
+msgid "Messages (total):"
+msgstr ""
+
+msgid "Daily limits:"
+msgstr ""

@@ -1,16 +1,18 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: zeppchat\n"
-"X-Crowdin-Project-ID: 611699\n"
-"X-Crowdin-Language: th\n"
-"X-Crowdin-File: en-US.po\n"
-"X-Crowdin-File-ID: 67\n"
-"Project-Id-Version: zeppchat\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-16 12:15+0000\n"
+"PO-Revision-Date: 2024-05-20 14:53+0000\n"
+"Last-Translator: MelianMiko <melianmiko@gmail.com>\n"
+"Language-Team: Thai <http://weblate.mmk.pw/projects/ai-chat/application/th/"
+">\n"
+"Language: th-TH\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Language-Team: Thai\n"
-"Language: th_TH\n"
-"PO-Revision-Date: 2023-12-15 08:17\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.5.5\n"
 
 msgid "About..."
 msgstr "เกี่ยวกับ"
@@ -27,17 +29,11 @@ msgstr "โดเนท"
 msgid "Stop due to length limit..."
 msgstr "มีข้อจำกัดสูงสุดเกี่ยวกับจำนวนตัวอักษร"
 
-msgid "Message..."
-msgstr "ข้อความ"
-
 msgid "This dialog closed due to timeout."
 msgstr "การสนทนานี้ถูกปิดเนื่องจากหมดเวลา."
 
 msgid "Settings..."
 msgstr "การตั้งค่า..."
-
-msgid "New chat..."
-msgstr "เเชทใหม่"
 
 msgid "Keyboard..."
 msgstr "คีย์บอร์ด"
@@ -72,18 +68,115 @@ msgstr "ส่ง"
 msgid "Before using this app..."
 msgstr "ก่อนใช้แอพนี้..."
 
-msgid "All data that you provide to this application will be sent to OpenAI to proceed with GPT-3 AI model. Keep in mind that all conversions may be used by OpenAI team to train next generations of ChatGPT. Do not share any personal or secret information with ChatGPT."
-msgstr "ข้อมูลทั้งหมดที่คุณให้ในแอปพลิเคชันนี้จะถูกส่งไปที่ OpenAI เพื่อดำเนินการด้วยโมเดล AI GPT-3 โปรดจำไว้ว่าการสนทนาทั้งหมดอาจถูกทีม OpenAI ใช้เพื่อฝึกฝนรุ่นต่อไปของ ChatGPT โปรดอย่าเปิดเผยข้อมูลส่วนบุคคลหรือข้อมูลลับใดๆ กับ ChatGPT นี้"
+#, fuzzy
+#| msgid ""
+#| "All data that you provide to this application will be sent to OpenAI to "
+#| "proceed with GPT-3 AI model. Keep in mind that all conversions may be "
+#| "used by OpenAI team to train next generations of ChatGPT. Do not share "
+#| "any personal or secret information with ChatGPT."
+msgid ""
+"All data that you provide to this application will be sent to Google to "
+"proceed with Gemini 1.5 AI model. Keep in mind that all conversions may be "
+"used by Google team to train next generations of Gemini. Do not share any "
+"personal or secret information with Gemini."
+msgstr ""
+"ข้อมูลทั้งหมดที่คุณให้ในแอปพลิเคชันนี้จะถูกส่งไปที่ Google เพื่อดำเนินการด้วยโมเดล AI Gemini 1.5 "
+"โปรดจำไว้ว่าการสนทนาทั้งหมดอาจถูกทีม Google ใช้เพื่อฝึกฝนรุ่นต่อไปของ Gemini "
+"โปรดอย่าเปิดเผยข้อมูลส่วนบุคคลหรือข้อมูลลับใดๆ กับ Gemini นี้"
 
-msgid "Also, keep in mind that ChatGPT isn't totally perfect, and it can generate incorrect information, may produce offensive or biased content. Developer of \"AI-Chat\" only provide access to ChatGPT, and didn't responsible for any content that is generated with this tool."
-msgstr "เช่นเดียวกับที่คุณได้กล่าวมา โปรแกรม ChatGPT ไม่เสถียรอย่างแท้จริง และมีโอกาสที่จะสร้างข้อมูลที่ไม่ถูกต้อง อาจสร้างเนื้อหาที่ไม่เหมาะสมหรือมีความเอียงข้อความ นักพัฒนาของ \"AI-Chat\" เพียงแค่ให้การเข้าถึง ChatGPT เท่านั้น และไม่รับผิดชอบต่อเนื้อหาที่ถูกสร้างขึ้นด้วยเครื่องมือนี้"
+#, fuzzy
+#| msgid ""
+#| "Also, keep in mind that ChatGPT isn't totally perfect, and it can "
+#| "generate incorrect information, may produce offensive or biased content. "
+#| "Developer of \"AI-Chat\" only provide access to ChatGPT, and didn't "
+#| "responsible for any content that is generated with this tool."
+msgid ""
+"Also, keep in mind that Gemini isn't totally perfect, and it can generate "
+"incorrect information, may produce offensive or biased content. Developer of "
+"\"AI-Chat\" only provide access to Gemini, and didn't responsible for any "
+"content that is generated with this tool."
+msgstr ""
+"เช่นเดียวกับที่คุณได้กล่าวมา โปรแกรม Gemini ไม่เสถียรอย่างแท้จริง "
+"และมีโอกาสที่จะสร้างข้อมูลที่ไม่ถูกต้อง อาจสร้างเนื้อหาที่ไม่เหมาะสมหรือมีความเอียงข้อความ "
+"นักพัฒนาของ \"AI-Chat\" เพียงแค่ให้การเข้าถึง Gemini เท่านั้น "
+"และไม่รับผิดชอบต่อเนื้อหาที่ถูกสร้างขึ้นด้วยเครื่องมือนี้"
 
 msgid "Continue only of you agree with all of this"
 msgstr "เริ่มต้นเพียงคุณเห็นด้วยกับทุกอย่างนี้"
 
-msgid "Try again"
-msgstr "ลองอีกครั้ง"
-
 msgid "Continue"
 msgstr "เริ่มต้น"
 
+msgid "Layouts:"
+msgstr ""
+
+msgid "Text will look like this"
+msgstr ""
+
+msgid "Restore default"
+msgstr ""
+
+msgid "Authors"
+msgstr ""
+
+msgid "Third-party libraries"
+msgstr ""
+
+msgid "Additional info"
+msgstr ""
+
+msgid "Show device info"
+msgstr ""
+
+msgid "Show build info"
+msgstr ""
+
+msgid "Main developer"
+msgstr ""
+
+msgid "Icon designer"
+msgstr ""
+
+msgid "Ask your question here"
+msgstr ""
+
+msgid "Or scroll down to view previous dialogs"
+msgstr ""
+
+msgid ""
+"No internet connection.\n"
+"Scroll down to view previous dialogs."
+msgstr ""
+
+msgid "Preparing..."
+msgstr ""
+
+msgid "Unknown error:"
+msgstr ""
+
+msgid "Too long record. Hint: use Send button when you finish your prompt."
+msgstr ""
+
+msgid "Listening..."
+msgstr ""
+
+msgid "Min firmware version: "
+msgstr ""
+
+msgid "Daily usage limit reached"
+msgstr ""
+
+msgid "Voice input for this device isn't supported now"
+msgstr ""
+
+msgid "Update device firmware to use this feature"
+msgstr ""
+
+msgid "Voice requests:"
+msgstr ""
+
+msgid "Messages (total):"
+msgstr ""
+
+msgid "Daily limits:"
+msgstr ""
