@@ -91,7 +91,7 @@ class ChatViewScreen extends ListView<ChatViewScreenProps> {
       return this.showActionBar();
     }
 
-    fetch(`${SERVER_BASE_URL}/chat/${this.props.id}/last`).then((r) => {
+    fetch(`${SERVER_BASE_URL}/api/v2/chat/${this.props.id}/last`).then((r) => {
       if(r.status === 404) {
         this.chatLocked = true;
         this.partial = this.messages[0];

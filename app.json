@@ -6,7 +6,7 @@
         "appType": "app",
         "version": {
             "code": 1,
-            "name": "2.1.0"
+            "name": "2.2.0"
         },
         "icon": "icon.png",
         "vender": "zepp",
@@ -31,7 +31,9 @@
             "targetZeppOS": "3.0.0",
             "designWidth": 480,
             "platforms": [
+                "active",
                 "balance",
+                "bip5unity",
                 "gtr4",
                 "gtr4le"
             ],
@@ -86,7 +88,6 @@
             "designWidth": 480,
             "platforms": [
                 "active_edge",
-                "active",
                 "bip5",
                 "trex_ultra",
                 "cheetah",
