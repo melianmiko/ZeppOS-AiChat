@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  api:
+    image: registry.vpn/ai-chat-backend
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "127.0.0.1"]
+      interval: 2m
+      timeout: 10s
+      retries: 5
+      start_period: 2m
+    environment:
+      - REDIS_HOST=redis
+    ports:
+      - "80:80"
+    volumes:
+      - ./data:/app/data
+
+  handler:
+    image: registry.vpn/ai-chat-backend
+    entrypoint: python -m ai_chat_handler
+    restart: always
+    environment:
+      - REDIS_HOST=redis
+    volumes:
+      - ./data:/app/data
+
+  redis:
+    image: redis
+    restart: always
+    volumes:
+      - ./data/redis:/data
